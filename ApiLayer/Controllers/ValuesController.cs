@@ -30,6 +30,5 @@ namespace ApiLayer.Controllers
         {
             return await v.GetUser();
         }
-
     }
 }
