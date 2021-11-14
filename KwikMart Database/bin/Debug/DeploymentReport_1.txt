@@ -1,0 +1,44 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Categoryes] (Table)
+       [dbo].[Companyes] (Table)
+       [dbo].[Department_Categoryes] (Table)
+       [dbo].[Departments] (Table)
+       [dbo].[Foods] (Table)
+       [dbo].[Manufacturer] (Table)
+       [dbo].[Manufacturer_Foods] (Table)
+       [dbo].[Order_Foods] (Table)
+       [dbo].[Orders] (Table)
+       [dbo].[Orders_History] (Table)
+       [dbo].[Rates] (Table)
+       [dbo].[Roles] (Table)
+       [dbo].[User_Roles] (Table)
+       [dbo].[Users] (Table)
+       [dbo].[FK_Dep_Cat_category_id] (Foreign Key)
+       [dbo].[FK_Dep_Cat_department_id] (Foreign Key)
+       [dbo].[FK_Foods_company] (Foreign Key)
+       [dbo].[FK_Foods_category] (Foreign Key)
+       [dbo].[FK_Manufacturer_Foods_food_id] (Foreign Key)
+       [dbo].[FK_Manufacturer_Foods_manufacturer_name] (Foreign Key)
+       [dbo].[FK_Order_Foods_order_id] (Foreign Key)
+       [dbo].[FK_Order_Foods_food_id] (Foreign Key)
+       [dbo].[FK_Orders_user] (Foreign Key)
+       [dbo].[FK_Orders_History_user] (Foreign Key)
+       [dbo].[FK_Orders_History_curier] (Foreign Key)
+       [dbo].[FK_Rates_user] (Foreign Key)
+       [dbo].[FK_Rates_food] (Foreign Key)
+       [dbo].[FK_User_Roles_user_id] (Foreign Key)
+       [dbo].[FK_User_Roles_role_id] (Foreign Key)
+       Check Constraint: unnamed constraint on [dbo].[Rates] (Check Constraint)
+
+** Supporting actions
