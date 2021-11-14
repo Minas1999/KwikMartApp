@@ -10,20 +10,14 @@ namespace ApiLayer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly IUser v;
 
-        public ValuesController(IUser v)
+        public UserController(IUser v)
         {
             this.v = v;
         }
-
-/*        [HttpGet]
-        public IActionResult GetUsers()
-        {
-             return Ok(v.GetUser());
-        }*/
 
         [HttpGet]
         public async Task<User> GetUsers()

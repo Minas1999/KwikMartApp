@@ -59,6 +59,7 @@
     <Folder Include="Tables" />
     <Folder Include="Scripts" />
     <Folder Include="Queryes" />
+    <Folder Include="Links" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Foods.sql" />
@@ -79,6 +80,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="KwikMart Database.publish.xml" />
+    <None Include="Links\Figma.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Include="Links\Figma.txt">
+      <DependentUpon>Links\Figma.tt</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

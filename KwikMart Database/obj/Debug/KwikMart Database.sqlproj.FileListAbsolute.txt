@@ -8,3 +8,13 @@ C:\Users\User\source\repos\KwikMart Database\KwikMart Database\obj\Debug\postdep
 C:\Users\User\source\repos\KwikMart Database\KwikMart Database\obj\Debug\predeploy.sql
 C:\Users\User\source\repos\KwikMart Database\KwikMart Database\obj\Debug\KwikMart_Database.dll
 C:\Users\User\source\repos\KwikMart Database\KwikMart Database\obj\Debug\KwikMart_Database.pdb
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\bin\Debug\KwikMart Database.dacpac
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\bin\Debug\KwikMart_Database.dll
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\bin\Debug\KwikMart_Database.pdb
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\obj\Debug\KwikMart Database.sqlprojAssemblyReference.cache
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\obj\Debug\Model.xml
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\obj\Debug\refactor.xml
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\obj\Debug\postdeploy.sql
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\obj\Debug\predeploy.sql
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\obj\Debug\KwikMart_Database.dll
+C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\obj\Debug\KwikMart_Database.pdb
