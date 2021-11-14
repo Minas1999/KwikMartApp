@@ -4,21 +4,26 @@
     <projectFile>ApiLayer/ApiLayer.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcc9bbe7-c06b-4e83-bc1d-8ccbce1a0dfa" name="Default Changelist" comment="" />
+    <list default="true" id="fcc9bbe7-c06b-4e83-bc1d-8ccbce1a0dfa" name="Default Changelist" comment=".." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/DataAccess/UserRepository.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a601f042-6264-4a90-94e8-f3a6f5763cf6/console.sql" />
         <option value="$PROJECT_DIR$/KwikMart Database/Queryes/Get.sql" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="20uqglSuS0nHwgYN8Vw3cAmBUgn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -69,8 +74,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636904941590</updated>
-      <workItem from="1636905004926" duration="370000" />
+      <workItem from="1636905004926" duration="721000" />
     </task>
+    <task id="LOCAL-00001" summary="..">
+      <created>1636905688944</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636905688944</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,12 +93,22 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value=".." />
+    <option name="LAST_COMMIT_MESSAGE" value=".." />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636905395748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1636905395748" />
+    <state x="617" y="314" key="Github.ShareDialog" timestamp="1636905657897">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="617" y="314" key="Github.ShareDialog/0.0.1536.834@0.0.1536.834" timestamp="1636905657897" />
+    <state x="461" y="121" key="Github.UntrackedFilesDialog" timestamp="1636905582016">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="461" y="121" key="Github.UntrackedFilesDialog/0.0.1536.834@0.0.1536.834" timestamp="1636905582016" />
     <state width="1478" height="211" key="GridCell.Tab.0.bottom" timestamp="1636905087610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -102,5 +125,13 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1478" height="211" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1636905087609" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1636905696899">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1636905696899" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1636905650132">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1636905650132" />
   </component>
 </project>
