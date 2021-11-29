@@ -2,6 +2,7 @@ using DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,6 +31,11 @@ namespace ApiLayer
 
             services.AddControllers();
             services.AddScoped<IUser, UserRepository>();
+
+            services.AddIdentityCore<User>();
+            services.AddScoped<IUserStore<User>, UserStore>();
+            services.AddScoped<IUserPasswordStore<User>, UserStore>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiLayer", Version = "v1" });

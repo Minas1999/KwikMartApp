@@ -6,23 +6,27 @@ namespace DataAccess
 {
     public class User
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string password { get; set; }
-        public string phone_number { get; set; }
-        public string gmail { get; set; }
-        public string address { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string NormalizedName { get; set; }
+        public string Password { get; set; }
+        public string Phone_number { get; set; }
+        public string Gmail { get; set; }
+        public string NormalizedGmail { get; set; }
+        public string Address { get; set; }
+        public string Status { get; set; }
 
         public User() {  }
 
-        public User(int id, string name, string password, string phone_number, string gmail, string address)
+        public User(int id, string name, string password, string phone_number, string gmail, string address, string status)
         {
-            this.id = id;
-            this.name = name;
-            this.password = password;
-            this.phone_number = phone_number;
-            this.gmail = gmail;
-            this.address = address;
+            this.Id = id;
+            this.Name = name;
+            this.Password = password;
+            this.Phone_number = phone_number;
+            this.Gmail = gmail;
+            this.Address = address;
+            this.Status = status;
         }
 
     }

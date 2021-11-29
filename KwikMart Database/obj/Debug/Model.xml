@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="KwikMart_Database.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\USER\SOURCE\REPOS\KWIKMARTAPP90909\KWIKMART DATABASE\OBJ\DEBUG\KWIKMART_DATABASE.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\USER\SOURCE\REPOS\KWIKMARTAPP88\KWIKMART DATABASE\OBJ\DEBUG\KWIKMART_DATABASE.DLL" />
 			<Metadata Name="AssemblyName" Value="KwikMart_Database" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\User\Source\Repos\KwikMartApp90909\KwikMart Database\obj\Debug\KwikMart_Database.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\User\Source\Repos\KwikMartApp88\KwikMart Database\obj\Debug\KwikMart_Database.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -59,6 +59,208 @@
 					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
 				</Entry>
 			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[AddUsers]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+INSERT INTO Users([user_name], [user_norm_name], [user_pNumber], [user_gmail], [user_norm_gmail], [user_address], [user_password], [user_status]) 
+VALUES(@name, @normName, @phone_number, @gmail, @normGmail, @address, @password, @status)]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_norm_name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_pNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_gmail]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_norm_gmail]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_address]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_status]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddUsers].[@name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddUsers].[@normName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddUsers].[@phone_number]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddUsers].[@gmail]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddUsers].[@normGmail]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddUsers].[@address]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddUsers].[@password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddUsers].[@status]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddUsers].[@name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddUsers].[@normName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddUsers].[@phone_number]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddUsers].[@gmail]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddUsers].[@normGmail]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddUsers].[@address]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddUsers].[@password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="300" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddUsers].[@status]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="490" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE AddUsers&#xD;&#xA;    @name VARCHAR(25),&#xD;&#xA;    @normName varchar(25),&#xD;&#xA;    @phone_number VARCHAR(25),&#xD;&#xA;    @gmail VARCHAR(25),&#xD;&#xA;    @normGmail varchar(25),&#xD;&#xA;    @address varchar(100),&#xD;&#xA;    @password VARCHAR(300),&#xD;&#xA;    @status varchar (100)&#xD;&#xA;AS" />
+			</Annotation>
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Categoryes]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1501,6 +1703,105 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<AttachedAnnotation Disambiguator="15" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_GetUserById]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SET NOCOUNT ON
+	select *
+	from Users
+	where user_id = @ID;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_GetUserById].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetUserById].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="116" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="Create Procedure [dbo].[sp_GetUserById]&#xD;&#xA;@Id int&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_GetUserByName]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SET NOCOUNT ON
+	select * 
+	from Users
+	where user_norm_name = @NORM_NAME]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Users]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Users].[user_norm_name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_GetUserByName].[@NORM_NAME]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetUserByName].[@NORM_NAME]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="55" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="144" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROC [dbo].[sp_GetUserByName]&#xD;&#xA;&#x9;@NORM_NAME nvarchar(55)&#xD;&#xA;AS" />
+			</Annotation>
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[User_Roles]">
 			<Property Name="IsAnsiNullsOn" Value="True" />

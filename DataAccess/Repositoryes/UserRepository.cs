@@ -17,7 +17,7 @@ namespace DataAccess
                 {
                     cmd.Connection = conn;
                     cmd.CommandText = "[dbo].[Get]";
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     using (SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.SingleRow))
                     {
@@ -26,12 +26,12 @@ namespace DataAccess
                             user = new User();
                             if (reader.Read())
                             {
-                                user.id = reader.GetInt32(reader.GetOrdinal("user_id"));
-                                user.name = reader.GetString(reader.GetOrdinal("user_name"));
-                                user.phone_number = reader.GetString(reader.GetOrdinal("user_pNumber"));
-                                user.gmail = reader.GetString(reader.GetOrdinal("user_gmail"));
-                                user.password = reader.GetString(reader.GetOrdinal("user_password"));
-                                user.address = reader.GetString(reader.GetOrdinal("user_address"));
+                                user.Id = reader.GetInt32(reader.GetOrdinal("user_id"));
+                                user.Name = reader.GetString(reader.GetOrdinal("user_name"));
+                                user.Phone_number = reader.GetString(reader.GetOrdinal("user_pNumber"));
+                                user.Gmail = reader.GetString(reader.GetOrdinal("user_gmail"));
+                                user.Password = reader.GetString(reader.GetOrdinal("user_password"));
+                                user.Address = reader.GetString(reader.GetOrdinal("user_address"));
                             }
                         }
                     }

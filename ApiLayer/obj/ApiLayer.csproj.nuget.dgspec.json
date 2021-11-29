@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\ApiLayer\\ApiLayer.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\ApiLayer\\ApiLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\ApiLayer\\ApiLayer.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\ApiLayer\\ApiLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\ApiLayer\\ApiLayer.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\ApiLayer\\ApiLayer.csproj",
         "projectName": "ApiLayer",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\ApiLayer\\ApiLayer.csproj",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\ApiLayer\\ApiLayer.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\ApiLayer\\obj\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\ApiLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp90909\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\KwikMartApp88\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -107,6 +107,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"

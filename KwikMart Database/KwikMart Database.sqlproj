@@ -77,6 +77,9 @@
     <Build Include="Tables\Order_Foods.sql" />
     <Build Include="Tables\Rates.sql" />
     <Build Include="Queryes\Get.sql" />
+    <Build Include="Queryes\GetUserById.sql" />
+    <Build Include="Queryes\GetUserByName.sql" />
+    <Build Include="Queryes\AddUsers.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="KwikMart Database.publish.xml" />
