@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "KwikMart Database", "KwikMart Database\KwikMart Database.sqlproj", "{E9B17AD5-4CF1-40A7-B678-082B8D305477}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{AF26DDFA-5525-4DEA-94C3-BE02566BD8C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{AF26DDFA-5525-4DEA-94C3-BE02566BD8C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiLayer", "ApiLayer\ApiLayer.csproj", "{D71B9F5E-FE51-441E-87CA-AD7B15197384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiLayer", "ApiLayer\ApiLayer.csproj", "{D71B9F5E-FE51-441E-87CA-AD7B15197384}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KwikMart WebClient", "KwikMart_WebClient\KwikMart WebClient.csproj", "{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{D71B9F5E-FE51-441E-87CA-AD7B15197384}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D71B9F5E-FE51-441E-87CA-AD7B15197384}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D71B9F5E-FE51-441E-87CA-AD7B15197384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

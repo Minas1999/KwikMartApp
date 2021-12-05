@@ -95,7 +95,7 @@ namespace DataAccess
                 {
                     cmd.Connection = conn;
                     cmd.CommandText = "[dbo].[sp_GetUserByName]";
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@NORM_NAME", SqlDbType.VarChar).Value = normalizedUserName;
 
                     using SqlDataReader reader = await cmd.ExecuteReaderAsync(CommandBehavior.SingleRow);
