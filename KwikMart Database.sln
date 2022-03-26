@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiLayer", "ApiLayer\ApiLayer.csproj", "{D71B9F5E-FE51-441E-87CA-AD7B15197384}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KwikMart WebClient", "KwikMart_WebClient\KwikMart WebClient.csproj", "{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KwikMart WebClient", "KwikMart_WebClient\KwikMart WebClient.csproj", "{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KwikMart_DesktopApp", "KwikMart_DesktopApp\KwikMart_DesktopApp.csproj", "{BF6C377E-0D46-49E2-AF41-A471862DDD26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBB4ED3B-B86A-4DEA-AD5D-F5BE4FF6299B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF6C377E-0D46-49E2-AF41-A471862DDD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF6C377E-0D46-49E2-AF41-A471862DDD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF6C377E-0D46-49E2-AF41-A471862DDD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF6C377E-0D46-49E2-AF41-A471862DDD26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
