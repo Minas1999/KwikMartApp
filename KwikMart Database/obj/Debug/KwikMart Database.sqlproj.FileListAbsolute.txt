@@ -28,3 +28,13 @@ C:\Users\User\Source\Repos\KwikMartApp88\KwikMart Database\obj\Debug\postdeploy.
 C:\Users\User\Source\Repos\KwikMartApp88\KwikMart Database\obj\Debug\predeploy.sql
 C:\Users\User\Source\Repos\KwikMartApp88\KwikMart Database\obj\Debug\KwikMart_Database.dll
 C:\Users\User\Source\Repos\KwikMartApp88\KwikMart Database\obj\Debug\KwikMart_Database.pdb
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\bin\Debug\KwikMart Database.dacpac
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\bin\Debug\KwikMart_Database.dll
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\bin\Debug\KwikMart_Database.pdb
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\obj\Debug\KwikMart Database.sqlproj.AssemblyReference.cache
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\obj\Debug\Model.xml
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\obj\Debug\refactor.xml
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\obj\Debug\postdeploy.sql
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\obj\Debug\predeploy.sql
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\obj\Debug\KwikMart_Database.dll
+C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\obj\Debug\KwikMart_Database.pdb

@@ -60,6 +60,8 @@
     <Folder Include="Scripts" />
     <Folder Include="Queryes" />
     <Folder Include="Links" />
+    <Folder Include="Queryes\Add Data" />
+    <Folder Include="Queryes\Helpers" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Foods.sql" />
@@ -89,6 +91,8 @@
     <None Include="Links\Figma.txt">
       <DependentUpon>Links\Figma.tt</DependentUpon>
     </None>
+    <None Include="Queryes\Add Data\Data.sql" />
+    <None Include="KwikMart Database_1.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

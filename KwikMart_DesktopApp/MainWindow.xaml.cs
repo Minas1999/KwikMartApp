@@ -82,9 +82,9 @@ namespace KwikMart_DesktopApp
         public void AddToCart(object sender, RoutedEventArgs e)
         {
 
-            var product = (sender as Button).Tag;
+            object product = (sender as Button).Tag;
             var id = (product as Products).food_id;
-            MessageBox.Show(id.ToString());
+            _ = MessageBox.Show(id.ToString());
 
             load_frame.Content = new OneProduct();
             load_frame.Visibility = Visibility.Visible;

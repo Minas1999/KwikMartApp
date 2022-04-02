@@ -3,3 +3,4 @@
 
 	CONSTRAINT PK_Manufacturer PRIMARY KEY([name])
 )
+GO

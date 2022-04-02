@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="KwikMart_Database.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\USER\SOURCE\REPOS\KWIKMARTAPP88\KWIKMART DATABASE\OBJ\DEBUG\KWIKMART_DATABASE.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\MINAS.SANDADZE\SOURCE\REPOS\KWIKMARTAPP12\KWIKMART DATABASE\OBJ\DEBUG\KWIKMART_DATABASE.DLL" />
 			<Metadata Name="AssemblyName" Value="KwikMart_Database" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\User\Source\Repos\KwikMartApp88\KwikMart Database\obj\Debug\KwikMart_Database.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\minas.sandadze\Source\Repos\KwikMartApp12\KwikMart Database\obj\Debug\KwikMart_Database.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -268,6 +268,7 @@ VALUES(@name, @normName, @phone_number, @gmail, @normGmail, @address, @password,
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[Categoryes].[category_id]">
 						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -312,6 +313,7 @@ VALUES(@name, @normName, @phone_number, @gmail, @normGmail, @address, @password,
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[Companyes].[company_id]">
 						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -467,6 +469,7 @@ VALUES(@name, @normName, @phone_number, @gmail, @normGmail, @address, @password,
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[Departments].[department_id]">
 						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -1139,6 +1142,7 @@ RETURN 0]]></Value>
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[Orders].[ord_id]">
 						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -1230,6 +1234,7 @@ RETURN 0]]></Value>
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[Orders_History].[order_id]">
 						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">

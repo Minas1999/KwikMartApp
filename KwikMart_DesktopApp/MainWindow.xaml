@@ -97,14 +97,15 @@
                                             <Border Width="100"  Height="100" CornerRadius="5" Margin="5">
 
                                                 <Border.Background>
-                                                    <ImageBrush x:Name="image" ImageSource="{Binding img_url}"/>
+                                                    <!--<ImageBrush x:Name="image" ImageSource="{Binding img_url}"/> -->
+                                                    <ImageBrush x:Name="image" ImageSource="https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg" />
                                                 </Border.Background>
                                             </Border>
 
                                             <TextBlock Text="{Binding id}" Visibility="Hidden"/>
                                             <TextBlock HorizontalAlignment="Center" Margin="5" Text="{Binding price, StringFormat=C0, ConverterCulture='hy-AM'}" FontSize="17" FontFamily="Franklin Gothic Medium"/>
                                             <TextBlock HorizontalAlignment="Center" Margin="5 0" Text="{Binding name}" FontSize="15"/>
-                                            <Button x:Name="btn"  Tag="{Binding}"  Click="AddToCart"  Content="Ավելացնել" Background="#BDBDBD" Margin="5,20,5,20">
+                                            <Button x:Name="btn" Tag="{Binding}"  Click="AddToCart"  Content="Ավելացնել" Background="#BDBDBD" Margin="5,20,5,20">
 
                                             </Button>
 

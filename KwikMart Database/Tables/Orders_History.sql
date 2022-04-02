@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Orders_History](
-	[order_id]	 [int]	NOT NULL,
+	[order_id]	 [int] IDENTITY	NOT NULL,
 	[order_date] [date] NOT NUll,
 	[price]		 [int]	NOT NULL,
 	[user_id]	 [int]  NOT NULL,

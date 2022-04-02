@@ -4,7 +4,7 @@
 	
 	CONSTRAINT PK_ManufacturerFoods PRIMARY KEY([manufacturer_name], [food_id])
 )
-Go
+GO
 
 ALTER TABLE [dbo].[Manufacturer_Foods] ADD 
 	CONSTRAINT [FK_Manufacturer_Foods_food_id] FOREIGN KEY 
