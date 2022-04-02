@@ -14,9 +14,10 @@ namespace DataAccess
         private static void init()
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
- 
-            builder.DataSource = "ASUS-VIVOBOOK";
-            builder.InitialCatalog = "Kwikmart";
+
+            //builder.DataSource = "ASUS-VIVOBOOK";
+            builder.DataSource = "ASUSVIVO";
+            builder.InitialCatalog = "KwikMart";
             builder.IntegratedSecurity = true;
 
             ConnectionString = builder.ConnectionString;
