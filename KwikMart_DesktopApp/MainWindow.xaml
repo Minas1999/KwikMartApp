@@ -8,16 +8,15 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         
         Title="MainWindow" Height="600" Width="1024" WindowStartupLocation="CenterScreen" 
-        
         MinWidth="1300"
         MinHeight="740"
         PreviewKeyDown="Window_PreviewKeyDown"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
         >
 
+    <Grid  x:Name="fullScreen" Background="White" Visibility="Visible">
 
-    <Grid x:Name="fullScreen" Background="White" Visibility="Visible">
-
-        <StackPanel Grid.RowSpan="2">
+        <StackPanel  Grid.RowSpan="2">
 
             <Grid x:Name="ok1" Background="Black" Height="50" VerticalAlignment="top" Visibility="Visible">
 
@@ -75,12 +74,12 @@
 
         </StackPanel>
 
-        <Grid Margin="250 55 0 0" Grid.RowSpan="2" Visibility="Visible">
-            <Grid x:Name="GridPrincipal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid  Margin="250 55 0 0" Grid.RowSpan="2" Visibility="Visible">
+            <Grid  x:Name="GridPrincipal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
 
 
-            <Grid x:Name="productScreen" Visibility="Visible">
+            <Grid x:Name="productScreen" MouseDown="pp" Visibility="Visible">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="29*"/>
                     <ColumnDefinition Width="13*"/>
@@ -125,12 +124,12 @@
                 </ScrollViewer>
 
                 <Frame x:Name="load_frame"
-                       NavigationUIVisibility="Hidden"/>
+                       NavigationUIVisibility="Hidden"
+                       />
             </Grid>
-
-
-
-
+            <Frame x:Name="load_frame3"
+                       NavigationUIVisibility="Hidden"
+                       />
             <Grid/>
 
 
@@ -218,7 +217,10 @@
             </Grid>
 
         </materialDesign:TransitioningContent> -->
-
+        
+        <Frame x:Name="full"
+                       NavigationUIVisibility="Hidden"
+                       />
 
     </Grid>
 </Window>

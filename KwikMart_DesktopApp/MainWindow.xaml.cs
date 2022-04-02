@@ -19,7 +19,7 @@ namespace KwikMart_DesktopApp
             InitializeComponent();
 
             List<Products> list = new();
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 10; i++)
             {
                 list.Add(new Products()
                 {
@@ -43,6 +43,16 @@ namespace KwikMart_DesktopApp
             //return MainWindow.Baskets;
         }
 
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void pp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("ppp2");
+
+        }
 
         private void Open_Facebook(object sender, EventArgs e)
         {
@@ -76,6 +86,8 @@ namespace KwikMart_DesktopApp
                 UseShellExecute = true
             };
             Process.Start(psi);
+            Profile win2 = new Profile();
+            win2.Show();
         }
 
 
@@ -93,8 +105,8 @@ namespace KwikMart_DesktopApp
 
         private void OpenLoginBar(object sender, RoutedEventArgs e)
         {
-
-            
+            load_frame3.Content = new Login();
+            load_frame3.Visibility = Visibility.Visible;
         }
 
         private void oooo(object sender, MouseEventArgs e)
@@ -146,7 +158,7 @@ namespace KwikMart_DesktopApp
 
         private void LogOut(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
 
