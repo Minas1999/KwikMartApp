@@ -46,13 +46,10 @@ namespace KwikMart_DesktopApp
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            
         }
 
         private void pp(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("ppp2");
-
         }
 
         private void Open_Facebook(object sender, EventArgs e)
@@ -170,10 +167,18 @@ namespace KwikMart_DesktopApp
 
         private void Window_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
+            //MessageBox.Show("111");
             if (e.Key == Key.Enter)
             {
                 SearchProducts();
             }
+        }
+
+        private void PPP(object sender, MouseButtonEventArgs e)
+        {
+            //_ = NavigationService.Navigate(null);
+            //Login l = new Login();
+           
         }
     }
 }

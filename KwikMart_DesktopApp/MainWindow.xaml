@@ -9,13 +9,14 @@
         
         Title="MainWindow" Height="600" Width="1024" WindowStartupLocation="CenterScreen" 
         MinWidth="1300"
+        MouseDoubleClick="PPP"
         MinHeight="740"
         PreviewKeyDown="Window_PreviewKeyDown"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         >
 
     <Grid  x:Name="fullScreen" Background="White" Visibility="Visible">
-
+        
         <StackPanel  Grid.RowSpan="2">
 
             <Grid x:Name="ok1" Background="Black" Height="50" VerticalAlignment="top" Visibility="Visible">
