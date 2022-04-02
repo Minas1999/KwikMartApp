@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Navigation;
 
 namespace KwikMart_DesktopApp
 {
@@ -130,9 +131,9 @@ namespace KwikMart_DesktopApp
 
         private void ListViewCh(object sender, SelectionChangedEventArgs e)
         {
-            MessageBox.Show("aaaa");
-            load_frame.Visibility = Visibility.Hidden;
-            ListViewProducts.Visibility = Visibility.Visible;
+            //MessageBox.Show("aaaa");
+            //load_frame.Visibility = Visibility.Hidden;
+            //ListViewProducts.Visibility = Visibility.Visible;
         }
 
         private void MoveCursorMenu(int index)

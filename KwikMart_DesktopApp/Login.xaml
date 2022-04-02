@@ -16,7 +16,7 @@
             <ColumnDefinition Width="270"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="3" Background="White">
+        <StackPanel Grid.Column="3" Background="#F8F8F8">
             <Button HorizontalAlignment="Right" Margin="10" BorderBrush="White" Background="White" Click="CloseUserProfile">
                 <materialDesign:PackIcon Kind="Close" Foreground="Black" />
             </Button>
@@ -48,7 +48,7 @@
                             <materialDesign:PackIcon Kind="Twitter" VerticalAlignment="Center" Foreground="White"/>
                         </Button>
                         <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FFE05959" BorderBrush="#FFE05959">
-                            <materialDesign:PackIcon Kind="GooglePlus" VerticalAlignment="Center" Foreground="White"/>
+                            <materialDesign:PackIcon Kind="Google" VerticalAlignment="Center" Foreground="White"/>
                         </Button>
                     </StackPanel>
                 </Grid>

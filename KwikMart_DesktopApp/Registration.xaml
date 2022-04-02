@@ -38,7 +38,7 @@
                         <PasswordBox Margin="0,5" materialDesign:HintAssist.Hint="Գաղտնաբառ" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="12"/>
                         <TextBox  Margin="0,5" materialDesign:HintAssist.Hint="Հասցե" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="12"/>
                         <Grid>
-                            <materialDesign:PackIcon Width="20" Height="20" Kind="MapMarker" VerticalAlignment="Center" Foreground="#FF01BAFF"/>
+                            <materialDesign:PackIcon MouseDown="GetCurrentLocation" Width="20" Height="20" Kind="MapMarker" VerticalAlignment="Center" Foreground="#FF01BAFF"/>
                             <Label Content= "Բացել քարտեզը հասցեն նշելու համար" HorizontalAlignment="Center" FontSize= "8" VerticalAlignment="Center" Margin= "20,5, 5, 5" Foreground="#707070"/>
                         </Grid>
                     </StackPanel>
