@@ -24,51 +24,44 @@
                 <Grid Margin="5">
 
                     <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="257,0,0,0">
-                        <Button x:Name="facebook"  Click="Open_Facebook" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
-                            <materialDesign:PackIcon Kind="Facebook"/>
-                        </Button>
-                        <Button x:Name="Twitter" Click="Open_Twitter" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
-                            <materialDesign:PackIcon Kind="Twitter"/>
-                        </Button>
-                        <Button Width="30" x:Name="Instagram" Click="Open_Instagram" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
-                            <materialDesign:PackIcon Kind="Instagram"/>
-                        </Button>
-
-
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                                <Button x:Name="facebook"  Click="Open_Facebook" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
+                                    <materialDesign:PackIcon Kind="Facebook"/>
+                                </Button>
+                                <Button x:Name="Twitter" Click="Open_Twitter" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
+                                    <materialDesign:PackIcon Kind="Twitter"/>
+                                </Button>
+                                <Button Width="30" x:Name="Instagram" Click="Open_Instagram" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
+                                    <materialDesign:PackIcon Kind="Instagram"/>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
 
 
 
 
-                        <TextBlock x:Name="name" Text="" Foreground="White" FontSize="14" VerticalAlignment="Center" Margin="0,0,50,0"/>
+                                <TextBlock x:Name="name" Text="" Foreground="White" FontSize="14" VerticalAlignment="Center" Margin="0,0,50,0"/>
 
-                        <TextBlock x:Name="count" Text="0" Foreground="White" FontSize="8" VerticalAlignment="Center" Margin="0,2,-10,0"/>
+                                <TextBlock x:Name="count" Text="0" Foreground="White" FontSize="8" VerticalAlignment="Center" Margin="0,2,-10,0"/>
 
-                        <Button x:Name="basket" Click="Button_Basket" Width="30" Margin="2,0,0,0" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
-                            <materialDesign:PackIcon Kind="Basket" ToolTip="Basket"/>
+                                <Button x:Name="basket" Click="Button_Basket" Width="30" Margin="2,0,0,0" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
+                                    <materialDesign:PackIcon Kind="Basket" ToolTip="Basket"/>
 
-                        </Button>
+                                </Button>
 
-                        <Button x:Name="OpenLogin_Bar" Click="OpenLoginBar" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
-                            <materialDesign:PackIcon Kind="Account" ToolTip="Login"/>
-                        </Button>
+                                <Button x:Name="OpenLogin_Bar" Click="OpenLoginBar" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
+                                    <materialDesign:PackIcon Kind="Account" ToolTip="Login"/>
+                                </Button>
 
-                        <Button x:Name="logout" Click="LogOut" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
-                            <materialDesign:PackIcon Kind="Logout" ToolTip="LogOut"/>
-                        </Button>
+                                <Button x:Name="logout" Click="LogOut" Width="30" Height="30" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="LightBlue">
+                                    <materialDesign:PackIcon Kind="Logout" ToolTip="LogOut"/>
+                                </Button>
 
-                    </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="300,0,0,0" Width="700" >
+                                <TextBox x:Name="searchBox" Width="500" materialDesign:HintAssist.Hint="Մուտքագրեք ապրանքի անունը" FontSize="16" Background="White" Margin="0,5,0,5"></TextBox>
+                                <Button Background="White" Click="SearchProduct" Foreground="Black" Content="Search" HorizontalAlignment="Left" Margin="10,0,110,0" VerticalAlignment="Center" Width="74" ToolTip="Search"/>
 
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="300,0,0,0" Width="700" >
-                        <TextBox x:Name="searchBox" Width="500" materialDesign:HintAssist.Hint="Մուտքագրեք ապրանքի անունը" FontSize="16" Background="White" Margin="0,5,0,5"></TextBox>
-                        <Button Background="White" Click="SearchProduct" Foreground="Black" Content="Search" HorizontalAlignment="Left" Margin="10,0,110,0" VerticalAlignment="Center" Width="74" ToolTip="Search"/>
-
-                    </StackPanel>
-
-
-
+                            </StackPanel>
 
                 </Grid>
             </Grid>
@@ -78,12 +71,10 @@
         <Grid  Margin="250 55 0 0" Grid.RowSpan="2" Visibility="Visible">
             <Grid  x:Name="GridPrincipal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-
-
             <Grid x:Name="productScreen" MouseDown="pp" Visibility="Visible">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="29*"/>
-                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="50*"/>
+
                 </Grid.ColumnDefinitions>
                 <ScrollViewer Grid.ColumnSpan="2" >
 
@@ -103,8 +94,8 @@
                                             </Border>
 
                                             <TextBlock Text="{Binding id}" Visibility="Hidden"/>
-                                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="{Binding price, StringFormat=C0, ConverterCulture='hy-AM'}" FontSize="17" FontFamily="Franklin Gothic Medium"/>
-                                            <TextBlock HorizontalAlignment="Center" Margin="5 0" Text="{Binding name}" FontSize="15"/>
+                                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="{Binding price, StringFormat=C0, ConverterCulture='hy-AM'}" Foreground="Gray" FontSize="17" FontFamily="Franklin Gothic Medium"/>
+                                            <TextBlock HorizontalAlignment="Center" Margin="5 0" Text="{Binding name}" FontSize="15" Foreground="Gray"/>
                                             <Button x:Name="btn" Tag="{Binding}"  Click="AddToCart"  Content="Ավելացնել" Background="#BDBDBD" Margin="5,20,5,20">
 
                                             </Button>

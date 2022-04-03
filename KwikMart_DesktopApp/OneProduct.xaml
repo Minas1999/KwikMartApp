@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:KwikMart_DesktopApp"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     Title="OneProduct"
     d:DesignHeight="650"
     d:DesignWidth="1100"
@@ -232,37 +232,34 @@
     </Page.Resources>
 
     <Grid
+        Background="White"
         Margin="20,20,0,0"
         HorizontalAlignment="Stretch"
         VerticalAlignment="Stretch">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="330"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions />
 
-        <StackPanel Grid.Row="0" Grid.Column="0">
-
-            <TextBlock
-                x:Name="MovieId"
-                Text="-1"
-                Visibility="Collapsed" />
+        <StackPanel  Margin="0, 0, 0, 0" Grid.Row="0" Grid.Column="0">
             <Border
-                Width="300"
-                Height="450"
+                Width="250"
+                Height="350"
                 Margin="5"
-                CornerRadius="5">
+                CornerRadius="5"
+                HorizontalAlignment="Left">
 
                 <Border.Background>
                     <ImageBrush x:Name="image" ImageSource="https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg" />
                 </Border.Background>
             </Border>
 
-            <Grid Margin="20,40,20,0">
+            <Grid Margin="10,40,0,0" HorizontalAlignment="Left" >
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75" />
                     <ColumnDefinition Width="100" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="75" />
                 </Grid.ColumnDefinitions>
                 <Button
                     Grid.Column="0"
@@ -289,8 +286,9 @@
                 </Button>
             </Grid>
 
-            <Button
-                Margin="20, 20, 20, 0"
+            <Button HorizontalAlignment="Left"
+                Width="250"    
+                Margin="10, 20, 0, 0"
                 Grid.Column="2"
                 Click="ButtonPlus"
                 FontSize="25"
@@ -298,6 +296,8 @@
                 Add To Card
             </Button>
 
+            
+ 
 
         </StackPanel>
 
@@ -308,13 +308,13 @@
             <TextBlock
                 x:Name="MovieTitle"
                 FontSize="26"
-                Foreground="White"
-                Text="{Binding Title}" />
+                Foreground="Black"
+                Text="Հաց քարի «Մատնաքաշ» 500գ" />
 
-            <Grid Height="100" Margin="0,10,0,0">
+            <Grid Height="100" Margin="0,20,0,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -327,19 +327,19 @@
                     Grid.Column="0"
                     FontSize="15"
                     Foreground="Black"
-                    Text="Release" />
+                    Text="Բաղադրություն" />
                 <TextBlock
                     Grid.Row="1"
                     Grid.Column="0"
                     FontSize="15"
                     Foreground="Black"
-                    Text="Duraction" />
+                    Text="Արտադրման երկիր" />
                 <TextBlock
                     Grid.Row="3"
                     Grid.Column="0"
                     FontSize="15"
                     Foreground="Black"
-                    Text="Genres" />
+                    Text="Ապրանքի կոդը" />
                 <TextBlock
                     x:Name="MovieRelease"
                     Grid.Row="0"
@@ -347,16 +347,107 @@
                     Margin="60,0,0,0"
                     FontSize="15"
                     Foreground="Black"
-                    Text="{Binding Release}" />
+                    Text="Ալյուր, աղ, ջուր, խմորիչ:" />
                 <TextBlock
                     x:Name="MovieDuraction"
                     Grid.Row="1"
                     Grid.Column="1"
                     Margin="60,0,0,0"
                     FontSize="15"
-                    Foreground="AntiqueWhite"
-                    Text="{Binding Duration}" />
+                    Foreground="Black"
+                    Text="Հայաստան" />
             </Grid>
+
+            <TextBlock
+                x:Name="MovieTitle2"
+                FontSize="20"
+                Margin="0,40,0,0"
+                Foreground="Black"
+                Text="Ընդհանուր տեղեկություններ" />
+            
+
+            <Grid Height="100" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="15"
+                    Foreground="Black"
+                    Text="Պատվիրված են ընդհանուր՝" />
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontSize="15"
+                    Foreground="Black"
+                    Text="Միջին գնահատական" />
+
+                <TextBlock
+                    x:Name="MovieRelease4"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="40,0,0,0"
+                    FontSize="15"
+                    Foreground="Black"
+                    Text="128 հատ" />
+
+                <materialDesign:RatingBar Grid.Row="1" Grid.Column="1" Max="5"
+                                 Margin="40,0,0,0" Value="{Binding Value1, Mode=TwoWay}" />
+
+            </Grid>
+
+
+            <TextBlock
+                x:Name="MovieTitle33"
+                FontSize="17"
+                Margin="0,20,0,0"
+                Foreground="Black"
+                Text="Արտադրող կազմակերպություն / Սննդի կետ" />
+
+            <Grid Height="50" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0"
+                    Grid.Column="0" Width="50" HorizontalAlignment="Left" Height="50" CornerRadius="80" BorderThickness="1" BorderBrush="Gray">
+                    <Border.Background>
+                        <ImageBrush 
+                            ImageSource="https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg"/>
+                    </Border.Background>
+                </Border>
+
+                <TextBlock
+                     
+                    Margin="0,10, 0, 0"
+                    HorizontalAlignment="Left"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontSize="15"
+                    PreviewMouseDown="OpenMap"
+                    Foreground="Black"
+                    Text="երեւան սիթի սուպերմարկետների ցանց" >
+
+                    
+
+                </TextBlock>
+
+            </Grid>
+            
+            
+            
+            
         </StackPanel>
 
 

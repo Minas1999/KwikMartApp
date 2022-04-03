@@ -98,7 +98,7 @@ namespace KwikMart_DesktopApp
 
             load_frame.Content = new OneProduct();
             load_frame.Visibility = Visibility.Visible;
-            ListViewProducts.Visibility = Visibility.Hidden;
+            //ListViewProducts.Visibility = Visibility.Hidden;
         }
 
         private void OpenLoginBar(object sender, RoutedEventArgs e)

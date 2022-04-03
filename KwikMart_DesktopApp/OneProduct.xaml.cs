@@ -47,5 +47,10 @@ namespace KwikMart_DesktopApp
                 ButtonCounter.Content = productCount - 1;
             }
         }
+
+        private void OpenMap(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("40");
+        }
     }
 }
