@@ -233,7 +233,7 @@
 
     <Grid
         Background="White"
-        Margin="20,20,0,0"
+        Margin="20,0,0,0"
         HorizontalAlignment="Stretch"
         VerticalAlignment="Stretch">
         <Grid.ColumnDefinitions>
@@ -242,7 +242,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions />
 
-        <StackPanel  Margin="0, 0, 0, 0" Grid.Row="0" Grid.Column="0">
+        <StackPanel  Margin="0, 20, 0, 0" Grid.Row="0" Grid.Column="0">
             <Border
                 Width="250"
                 Height="350"
@@ -286,14 +286,16 @@
                 </Button>
             </Grid>
 
+
             <Button HorizontalAlignment="Left"
-                Width="250"    
+                Width="250" 
+                    Height="30"
                 Margin="10, 20, 0, 0"
                 Grid.Column="2"
                 Click="ButtonPlus"
-                FontSize="25"
+                FontSize="15"
                 Style="{DynamicResource PlusButtonRound}">
-                Add To Card
+                Ավելացնել զամբյուղում
             </Button>
 
             
@@ -304,7 +306,7 @@
         <StackPanel
             Grid.Row="0"
             Grid.Column="1"
-            Margin="10,0,0,0">
+            Margin="10,20,0,0">
             <TextBlock
                 x:Name="MovieTitle"
                 FontSize="26"

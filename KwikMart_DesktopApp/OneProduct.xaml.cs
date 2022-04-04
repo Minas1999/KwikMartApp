@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,6 +51,7 @@ namespace KwikMart_DesktopApp
         private void OpenMap(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("40");
+            
         }
     }
 }

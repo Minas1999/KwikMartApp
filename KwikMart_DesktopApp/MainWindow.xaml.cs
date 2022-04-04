@@ -14,13 +14,14 @@ namespace KwikMart_DesktopApp
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
 
             InitializeComponent();
 
             List<Products> list = new();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 15; i++)
             {
                 list.Add(new Products()
                 {
@@ -30,7 +31,7 @@ namespace KwikMart_DesktopApp
                     food_id = i,
                     id = i,
                     img_url = "url",
-                    price = 20
+                    price = i
                 });
             }
 
@@ -94,7 +95,7 @@ namespace KwikMart_DesktopApp
 
             object product = (sender as Button).Tag;
             var id = (product as Products).food_id;
-            _ = MessageBox.Show(id.ToString());
+            //_ = MessageBox.Show(id.ToString());
 
             load_frame.Content = new OneProduct();
             load_frame.Visibility = Visibility.Visible;
@@ -120,20 +121,16 @@ namespace KwikMart_DesktopApp
 
         private void Button_Basket(object sender, RoutedEventArgs e)
         {
-               
+            CardPage shoppingBasketPage;
+            listViewDepartments.Visibility = Visibility.Collapsed;
+            productScreen.Visibility = Visibility.Collapsed;
+
+            shoppingBasketPage = new CardPage();
+            shoppingBasketPage.main = this;
+            fullScreen.Children.Add(shoppingBasketPage);
         }
 
-
-
-
-        private void ListViewCh(object sender, SelectionChangedEventArgs e)
-        {
-            //MessageBox.Show("aaaa");
-            //load_frame.Visibility = Visibility.Hidden;
-            //ListViewProducts.Visibility = Visibility.Visible;
-        }
-
-        private void MoveCursorMenu(int index)
+        public void MoveCursorMenu(int index)
         {
             GridCoursor.Margin = new Thickness(0, (170 + (60 * index)), 0, 0);
         }
@@ -179,6 +176,32 @@ namespace KwikMart_DesktopApp
             //_ = NavigationService.Navigate(null);
             //Login l = new Login();
            
+        }
+
+        private void DepartmentsListView(object sender, SelectionChangedEventArgs e)
+        {
+            //load_frame
+            //.Visibility = Visibility.Hidden;
+            //ListViewProducts.Visibility = Visibility.Visible;
+            int index = ListView.SelectedIndex;
+            MoveCursorMenu(index);
+        }
+
+        private void DepartmentsListViewForHiddenPages(object sender, MouseButtonEventArgs e)
+        {
+            load_frame.Visibility = Visibility.Hidden;
+            ListViewProducts.Visibility = Visibility.Visible;
+        }
+
+        private void full_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void OpenFilterBar(object sender, RoutedEventArgs e)
+        {
+            load_frame3.Content = new FilterPage();
+            load_frame3.Visibility = Visibility.Visible;
         }
     }
 }
