@@ -55,12 +55,44 @@ VALUES
  
 select * from Users
 
+--STEP 6
 insert into Users([user_name], [user_norm_name], [user_pNumber], [user_gmail], [user_norm_gmail], [user_address], [user_password], [user_status])
 values 
 (N'Մինաս', N'ՄԻՆԱՍ', '+37491386888', 'mss.sandadze@gmail.com', 'MSS.SANDADZE@GMAIL.COM', N'Ավան-Առինջ', 'HashPassword', 'Admin'),
 (N'Անի', N'ԱՆԻ', '+37491388569', 'ani.hakobyab@gmail.com', 'ANI>HAKOBYAN@GMAIL.COM', N'Ավան-Առինջ', 'HashPassword', 'User')
 
+--STEP 7
+insert into Couriers([courier_id], [name], [address], [phoneNumber], [passport_number], [gender], [bank_account])
+values
+(1, N'Արամ Սարգսյան', N'Շենգավիթ 12Ա', N'+37499548796', N'896577000', N'Տղա', N'0070211124'),
+(2, N'Վահագ Նազարյան', N'Շենգավիթ 7Ա', N'+37499548000', N'896577569', N'Տղա', N'0070211177')
 
+
+select * from Foods
+select * from Orders
+
+insert into Orders([ord_date], [ord_tmOfTaken], [ord_ttl_amount], [ord_user_id])
+values
+('2022-04-08', '2004-01-22', 5500, 1),
+('2022-04-08', '2022-04-08', 1200, 1),
+('2022-04-08', '2022-04-08', 3540, 1),
+('2022-04-08', '2022-04-08', 1100, 2)
+
+insert into CourierOrders([courier_id], [order_id])
+values 
+(1, 6),
+(2, 9)
+
+select * from Couriers
+join CourierOrders on CourierOrders.courier_id = Couriers.courier_id
+join Orders on CourierOrders.order_id = Orders.ord_id
+
+select * from Orders
+
+update Orders
+
+
+select * from Foods	
 
 --DECLARE @DatabaseName nvarchar(50)
 --SET @DatabaseName = N'KwikMart'

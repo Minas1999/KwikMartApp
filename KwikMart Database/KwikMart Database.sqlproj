@@ -82,6 +82,8 @@
     <Build Include="Queryes\GetUserById.sql" />
     <Build Include="Queryes\GetUserByName.sql" />
     <Build Include="Queryes\AddUsers.sql" />
+    <Build Include="Tables\Couriers.sql" />
+    <Build Include="Tables\CourierOrders.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="KwikMart Database.publish.xml" />
@@ -93,8 +95,13 @@
     </None>
     <None Include="Queryes\Add Data\Data.sql" />
     <None Include="KwikMart Database_1.publish.xml" />
+    <None Include="KwikMart Database_2.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Queryes\GetCourierOrders.sql" />
+    <None Include="Queryes\GetAllProducts.sql" />
   </ItemGroup>
 </Project>
