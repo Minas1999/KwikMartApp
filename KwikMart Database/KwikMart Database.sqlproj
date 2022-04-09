@@ -84,9 +84,9 @@
     <Build Include="Queryes\AddUsers.sql" />
     <Build Include="Tables\Couriers.sql" />
     <Build Include="Tables\CourierOrders.sql" />
+    <Build Include="Tables\UserBasket.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="KwikMart Database.publish.xml" />
     <None Include="Links\Figma.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
     </None>
@@ -94,14 +94,16 @@
       <DependentUpon>Links\Figma.tt</DependentUpon>
     </None>
     <None Include="Queryes\Add Data\Data.sql" />
-    <None Include="KwikMart Database_1.publish.xml" />
-    <None Include="KwikMart Database_2.publish.xml" />
+    <None Include="KwikMart Database.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+    <None Include="Queryes\GetFoodByFoodID.sql" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="Queryes\GetCourierOrders.sql" />
     <None Include="Queryes\GetAllProducts.sql" />
+    <None Include="Queryes\StoreProductToUserBasket.sql" />
+    <None Include="Queryes\GetUserProductsFromBasket.sql" />
   </ItemGroup>
 </Project>

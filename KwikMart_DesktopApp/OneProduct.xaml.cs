@@ -1,4 +1,7 @@
 ﻿
+using DataAccess.Models;
+using DataAccess.Repositoryes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,20 @@ namespace KwikMart_DesktopApp
     /// </summary>
     public partial class OneProduct : Page
     {
-        public OneProduct()
+        private readonly int foodID;
+        ProductRepository productRepository;
+        public static List<Products> basketProducts = new();
+        public OneProduct(int foodID)
         {
             InitializeComponent();
+            productRepository = new();
+            this.foodID = foodID;
+
+            Products pr = new Products();
+            pr = productRepository.GetProductByID(foodID);
+            MovieTitle.Text = pr.name;
+            //image = pr.img_url;
+
         }
 
         private void ButtonPlus(object sender, RoutedEventArgs e)
@@ -34,7 +48,7 @@ namespace KwikMart_DesktopApp
             }
             else
             {
-                MessageBox.Show("Տվյալ ապրանքից կարելի է ընտրել առավելագույը 10 հատ");
+                _ = MessageBox.Show("Տվյալ ապրանքից կարելի է ընտրել առավելագույը 10 հատ");
             }
         }
 
@@ -52,6 +66,14 @@ namespace KwikMart_DesktopApp
         {
             MessageBox.Show("40");
             
+        }
+
+        private void ButtonAdd(object sender, RoutedEventArgs e)
+        {
+            Products pr = new Products();
+            pr = productRepository.GetProductByID(foodID);
+            //basketProducts.Add(pr);
+            productRepository.AddProductsToBasket(pr);
         }
     }
 }

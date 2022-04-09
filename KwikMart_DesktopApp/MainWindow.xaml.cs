@@ -1,4 +1,6 @@
 ﻿//using DataAccess.Models;
+using DataAccess.Models;
+using DataAccess.Repositoryes;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,28 +17,31 @@ namespace KwikMart_DesktopApp
     public partial class MainWindow : Window
     {
 
+        ProductRepository productRepository;
         public MainWindow()
         {
 
             InitializeComponent();
+            productRepository = new();
 
             List<Products> list = new();
-            for (int i = 0; i < 15; i++)
-            {
-                list.Add(new Products()
-                {
-                    name = "aaa",
-                    count = 5,
-                    description = "desc",
-                    food_id = i,
-                    id = i,
-                    img_url = "url",
-                    price = i
-                });
-            }
+            //for (int i = 0; i < 15; i++)
+            //{
+            //    list.Add(new Products()
+            //    {
+            //        name = "aaa",
+            //        count = 5,
+            //        description = "desc",
+            //        food_id = i,
+            //        id = i,
+            //        img_url = "url",
+            //        price = i
+            //    });
+            //}
 
+            //list.Add()
 
-            ListViewProducts.ItemsSource = list;
+            ListViewProducts.ItemsSource = productRepository.GetAllProducts();
 
         }
 
@@ -94,10 +99,11 @@ namespace KwikMart_DesktopApp
         {
 
             object product = (sender as Button).Tag;
+            var a = product as Products;
             var id = (product as Products).food_id;
             //_ = MessageBox.Show(id.ToString());
 
-            load_frame.Content = new OneProduct();
+            load_frame.Content = new OneProduct(id);
             load_frame.Visibility = Visibility.Visible;
             //ListViewProducts.Visibility = Visibility.Hidden;
         }
@@ -132,7 +138,7 @@ namespace KwikMart_DesktopApp
 
         public void MoveCursorMenu(int index)
         {
-            GridCoursor.Margin = new Thickness(0, (170 + (60 * index)), 0, 0);
+            GridCoursor.Margin = new Thickness(0, 170 + (60 * index), 0, 0);
         }
 
         public void Change()

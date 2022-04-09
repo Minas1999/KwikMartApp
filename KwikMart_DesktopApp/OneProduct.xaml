@@ -292,7 +292,7 @@
                     Height="30"
                 Margin="10, 20, 0, 0"
                 Grid.Column="2"
-                Click="ButtonPlus"
+                Click="ButtonAdd"
                 FontSize="15"
                 Style="{DynamicResource PlusButtonRound}">
                 Ավելացնել զամբյուղում
@@ -303,6 +303,7 @@
 
         </StackPanel>
 
+        <!--Text="Հաց քարի «Մատնաքաշ» 500գ"-->
         <StackPanel
             Grid.Row="0"
             Grid.Column="1"
@@ -311,7 +312,8 @@
                 x:Name="MovieTitle"
                 FontSize="26"
                 Foreground="Black"
-                Text="Հաց քարի «Մատնաքաշ» 500գ" />
+                Text="{Binding food_name}"
+                />
 
             <Grid Height="100" Margin="0,20,0,0">
                 <Grid.ColumnDefinitions>

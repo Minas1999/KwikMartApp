@@ -87,12 +87,11 @@ select * from Couriers
 join CourierOrders on CourierOrders.courier_id = Couriers.courier_id
 join Orders on CourierOrders.order_id = Orders.ord_id
 
-select * from Orders
 
-update Orders
+exec GetFoodByFoodID @food_id = 3
 
 
-select * from Foods	
+--select * from Foods	
 
 --DECLARE @DatabaseName nvarchar(50)
 --SET @DatabaseName = N'KwikMart'

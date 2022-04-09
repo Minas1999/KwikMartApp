@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess.Models;
+using DataAccess.Repositoryes;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -22,26 +24,29 @@ namespace KwikMart_DesktopApp
     public partial class CardPage : UserControl
     {
         public MainWindow main { get; set; }
+        OneProduct oneProduct { get; set; }
+
+        ProductRepository productRepository = new();
         public CardPage()
         {
             InitializeComponent();
             List<Products> list = new();
-            for (int i = 0; i < 8; i++)
-            {
-                list.Add(new Products()
-                {
-                    name = "aaa",
-                    count = 5,
-                    description = "desc",
-                    food_id = i,
-                    id = i,
-                    img_url = "url",
-                    price = 20
-                });
-            }
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    list.Add(new Products()
+            //    {
+            //        name = "aaa",
+            //        description = "desc",
+            //        food_id = i,
+            //        id = i,
+            //        img_url = "url",
+            //        price = 20
+            //    });
+            //}
 
+            var a = productRepository.GetProductsToBasket();
 
-            ListViewProducts.ItemsSource = list;
+            ListViewProducts.ItemsSource = a;
         }
 
         private void btn_Back(object sender, RoutedEventArgs e)

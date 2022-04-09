@@ -9,6 +9,9 @@ namespace DataAccess.Interfaces
 {
     interface IProduct
     {
-        public Task<Products> GetAllProducts();
+        public List<Products> GetAllProducts();
+        public Products GetProductByID(int foodID);
+        public void AddProductsToBasket(Products basketProducts);
+        public List<Products> GetProductsToBasket();
     }
 }

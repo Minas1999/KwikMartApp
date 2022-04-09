@@ -215,8 +215,8 @@
                                                 CornerRadius="5">
 
                                                 <Border.Background>
-                                                    <!--<ImageBrush x:Name="image" ImageSource="{Binding img_url}"/> -->
-                                                    <ImageBrush x:Name="image" ImageSource="https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg" />
+                                                    <ImageBrush x:Name="image" ImageSource="{Binding img_url}"/>
+                                                    <!--<ImageBrush x:Name="image" ImageSource="https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg" />-->
                                                 </Border.Background>
                                             </Border>
 

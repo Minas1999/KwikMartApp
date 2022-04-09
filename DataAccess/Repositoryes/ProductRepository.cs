@@ -12,44 +12,114 @@ namespace DataAccess.Repositoryes
 {
     public class ProductRepository : IProduct
     {
-        public Task<Products> GetAllProducts()
+        public void AddProductsToBasket(Products product)
         {
-            List<Products> productsList;
             using (SqlConnection conn = ConnectionManager.CreateConnection())
             {
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand())
+                using var cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "[dbo].[StoreProductsToUserBasket]";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("food_id", product.food_id);
+                cmd.Parameters.AddWithValue("food_name", product.name);
+                cmd.Parameters.AddWithValue("food_price", product.price);
+                cmd.Parameters.AddWithValue("food_desc", product.description);
+                cmd.Parameters.AddWithValue("food_ctg_id", 1);
+                cmd.Parameters.AddWithValue("food_cmp_id", 2);
+                cmd.Parameters.AddWithValue("food_img", product.img_url);
+                cmd.ExecuteReader();
+            }
+        }
+
+        public List<Products> GetAllProducts()
+        {
+            List<Products> productsList = new();
+            using (SqlConnection conn = ConnectionManager.CreateConnection())
+            {
+                conn.Open();
+                using var cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "[dbo].[GetAllProducts]";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    cmd.Connection = conn;
-                    cmd.CommandText = "[dbo].[Get]";
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    using (SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.SingleRow))
+                    while (reader.Read())
                     {
-                        if (reader.HasRows)
+                        productsList.Add(new Products()
                         {
-                            productsList = new();
-                            if (reader.Read())
-                            {
-                                productsList.Add(new Products()
-                                {
-                                    food_id = reader.GetInt32(reader.GetOrdinal("food_id")),
-                                    name = reader.GetString(reader.GetOrdinal("name")),
-
-                                });
-                                user.Id = reader.GetInt32(reader.GetOrdinal("user_id"));
-                                user.Name = reader.GetString(reader.GetOrdinal("user_name"));
-                                user.Phone_number = reader.GetString(reader.GetOrdinal("user_pNumber"));
-                                user.Gmail = reader.GetString(reader.GetOrdinal("user_gmail"));
-                                user.Password = reader.GetString(reader.GetOrdinal("user_password"));
-                                user.Address = reader.GetString(reader.GetOrdinal("user_address"));
-                            }
-                        }
+                            food_id = reader.GetInt32(reader.GetOrdinal("food_id")),
+                            name = reader.GetString(reader.GetOrdinal("food_name")),
+                            price = reader.GetInt32(reader.GetOrdinal("food_price")),
+                            description = reader.GetString(reader.GetOrdinal("food_desc")),
+                            img_url = reader.GetString(reader.GetOrdinal("food_img_url"))
+                        });
                     }
                 }
             }
-            return Task.FromResult(user);
+            return productsList;
+        }
 
+
+        public Products GetProductByID(int food_ID)
+        {
+            Products product = new();
+            using (SqlConnection conn = ConnectionManager.CreateConnection())
+            {
+                conn.Open();
+                using var cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "[dbo].[GetFoodByFoodID]";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("food_id", food_ID);
+
+                using SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    if (reader.Read())
+                    {
+                        product.food_id = reader.GetInt32(reader.GetOrdinal("food_id"));
+                        product.name = reader.GetString(reader.GetOrdinal("food_name"));
+                        product.price = reader.GetInt32(reader.GetOrdinal("food_price"));
+                        product.description = reader.GetString(reader.GetOrdinal("food_desc"));
+                        product.img_url = reader.GetString(reader.GetOrdinal("food_img_url"));
+
+                    }
+                }
+            }
+            return product;
+        }
+
+        public List<Products> GetProductsToBasket()
+        {
+            List<Products> productsList = new();
+            using (SqlConnection conn = ConnectionManager.CreateConnection())
+            {
+                conn.Open();
+                using var cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "[dbo].[GetUserProductsFromBasket]";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        productsList.Add(new Products()
+                        {
+                            food_id = reader.GetInt32(reader.GetOrdinal("food_id")),
+                            name = reader.GetString(reader.GetOrdinal("food_name")),
+                            price = reader.GetInt32(reader.GetOrdinal("food_price")),
+                            description = reader.GetString(reader.GetOrdinal("food_desc")),
+                            img_url = reader.GetString(reader.GetOrdinal("food_img_url"))
+                        });
+                    }
+                }
+            }
+            return productsList;
         }
     }
 }

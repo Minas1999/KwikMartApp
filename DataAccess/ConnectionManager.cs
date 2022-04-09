@@ -17,7 +17,7 @@ namespace DataAccess
 
             //builder.DataSource = "ASUS-VIVOBOOK";
             builder.DataSource = "ASUSVIVO";
-            builder.InitialCatalog = "KwikMart";
+            builder.InitialCatalog = "Kwik1";
             builder.IntegratedSecurity = true;
 
             ConnectionString = builder.ConnectionString;
