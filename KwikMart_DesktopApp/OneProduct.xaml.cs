@@ -77,6 +77,8 @@ namespace KwikMart_DesktopApp
             productRepository.AddProductsToBasket(pr, int.Parse(ButtonCounter.Content.ToString()));
 
             MessageBox.Show("Ավելացավ զամբյուղում");
+
+            NavigationService.Navigate(null);
         }
     }
 }
