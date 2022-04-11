@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess.Models;
+using DataAccess.Repositoryes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +22,8 @@ namespace KwikMart_DesktopApp
     /// </summary>
     public partial class FilterPage : Page
     {
+        ProductRepository productRepository;
+        MainWindow main { get; set; }
         public FilterPage()
         {
             InitializeComponent();
@@ -32,6 +36,15 @@ namespace KwikMart_DesktopApp
 
         private void FilterProducts(object sender, RoutedEventArgs e)
         {
+            productRepository = new();
+
+            if (Convert.ToBoolean(AjmanKarg.IsChecked))
+            {
+                MessageBox.Show("c");
+                List<Products> a = (List<Products>)main.ListViewProducts.ItemsSource;
+                //main.ListViewProducts.ItemsSource = from s in a orderby s.
+            }
+
             _ = NavigationService.Navigate(null);
         }
     }

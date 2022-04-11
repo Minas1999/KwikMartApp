@@ -275,7 +275,7 @@
                     FontSize="25"
                     IsHitTestVisible="False"
                     Style="{DynamicResource CountButtonStyle}">
-                    0
+                    1
                 </Button>
                 <Button
                     Grid.Column="2"

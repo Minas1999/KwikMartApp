@@ -1,5 +1,6 @@
 ﻿CREATE TABLE [dbo].[UserBasket](
-	[user_id]         [int] IDENTITY   NOT NULL,
+	[ID]    [int] not null IDENTITY,
+	[user_id]         [int]  NOT NULL,
 	[food_id]      [int]   NOT NULL,
 	[food_name]    [nvarchar] (55)  NOT NULL,
 	[food_price]   [int]            NOT NULL,
@@ -7,8 +8,9 @@
 	[food_ctg_id]  [int]            NOT NULL,
 	[food_cmp_id]  [int]		    NOT NULL,
 	[food_img_url] [varchar]  (MAX) NOT NULL,
+	[product_count] [int] NOT NULL
 
-	CONSTRAINT PK_UserBasket PRIMARY KEY([user_id])
+	CONSTRAINT PK_UserBasket PRIMARY KEY([ID], [user_id])
 )
 GO
 

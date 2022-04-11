@@ -66,6 +66,7 @@
 
 
                         <RadioButton
+                            Name="AjmanKarg"
                             Margin="20,5"
                             Background="#707070"
                             Foreground="#707070"

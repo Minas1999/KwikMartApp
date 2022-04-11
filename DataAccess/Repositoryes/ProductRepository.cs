@@ -12,15 +12,16 @@ namespace DataAccess.Repositoryes
 {
     public class ProductRepository : IProduct
     {
-        public void AddProductsToBasket(Products product)
+        public void AddProductsToBasket(Products product, int count)
         {
             using (SqlConnection conn = ConnectionManager.CreateConnection())
             {
                 conn.Open();
                 using var cmd = new SqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "[dbo].[StoreProductsToUserBasket]";
+                cmd.CommandText = "[dbo].[StoreProductsToUserBasket1]";
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("user_id", 1);
                 cmd.Parameters.AddWithValue("food_id", product.food_id);
                 cmd.Parameters.AddWithValue("food_name", product.name);
                 cmd.Parameters.AddWithValue("food_price", product.price);
@@ -28,6 +29,8 @@ namespace DataAccess.Repositoryes
                 cmd.Parameters.AddWithValue("food_ctg_id", 1);
                 cmd.Parameters.AddWithValue("food_cmp_id", 2);
                 cmd.Parameters.AddWithValue("food_img", product.img_url);
+                cmd.Parameters.AddWithValue("product_count", count);
+
                 cmd.ExecuteReader();
             }
         }
@@ -114,7 +117,8 @@ namespace DataAccess.Repositoryes
                             name = reader.GetString(reader.GetOrdinal("food_name")),
                             price = reader.GetInt32(reader.GetOrdinal("food_price")),
                             description = reader.GetString(reader.GetOrdinal("food_desc")),
-                            img_url = reader.GetString(reader.GetOrdinal("food_img_url"))
+                            img_url = reader.GetString(reader.GetOrdinal("food_img_url")),
+                            count = reader.GetInt32(reader.GetOrdinal("product_count")),
                         });
                     }
                 }

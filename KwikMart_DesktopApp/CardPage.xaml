@@ -51,7 +51,7 @@
                                                         <DropShadowEffect ShadowDepth="1" />
                                                     </Border.Effect>
                                                     <Border.Background>
-                                                        <ImageBrush ImageSource="https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg" />
+                                                        <ImageBrush x:Name="image" ImageSource="{Binding img_url}"/>
 
                                                     </Border.Background>
 

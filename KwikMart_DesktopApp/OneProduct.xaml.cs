@@ -35,6 +35,7 @@ namespace KwikMart_DesktopApp
             Products pr = new Products();
             pr = productRepository.GetProductByID(foodID);
             MovieTitle.Text = pr.name;
+            
             //image = pr.img_url;
 
         }
@@ -72,8 +73,9 @@ namespace KwikMart_DesktopApp
         {
             Products pr = new Products();
             pr = productRepository.GetProductByID(foodID);
-            //basketProducts.Add(pr);
-            productRepository.AddProductsToBasket(pr);
+            productRepository.AddProductsToBasket(pr, int.Parse(ButtonCounter.Content.ToString()));
+
+            MessageBox.Show("Ավելացավ զամբյուղում");
         }
     }
 }

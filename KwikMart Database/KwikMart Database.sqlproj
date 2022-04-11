@@ -9,8 +9,7 @@
     <ProjectGuid>{e9b17ad5-4cf1-40a7-b678-082b8d305477}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
-    <RootPath>
-    </RootPath>
+    <RootPath />
     <RootNamespace>KwikMart_Database</RootNamespace>
     <AssemblyName>KwikMart_Database</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
@@ -48,7 +47,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
-    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
     <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
     <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
   </PropertyGroup>
@@ -95,6 +93,9 @@
     </None>
     <None Include="Queryes\Add Data\Data.sql" />
     <None Include="KwikMart Database.publish.xml" />
+    <None Include="KwikMart Database_1.publish.xml" />
+    <None Include="KwikMart Database_2.publish.xml" />
+    <None Include="KwikMart Database_3.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
@@ -105,5 +106,6 @@
     <None Include="Queryes\GetAllProducts.sql" />
     <None Include="Queryes\StoreProductToUserBasket.sql" />
     <None Include="Queryes\GetUserProductsFromBasket.sql" />
+    <None Include="Queryes\CreateOrder.sql" />
   </ItemGroup>
 </Project>
