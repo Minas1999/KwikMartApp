@@ -93,9 +93,6 @@
     </None>
     <None Include="Queryes\Add Data\Data.sql" />
     <None Include="KwikMart Database.publish.xml" />
-    <None Include="KwikMart Database_1.publish.xml" />
-    <None Include="KwikMart Database_2.publish.xml" />
-    <None Include="KwikMart Database_3.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

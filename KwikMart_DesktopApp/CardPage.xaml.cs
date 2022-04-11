@@ -28,21 +28,22 @@ namespace KwikMart_DesktopApp
 
         ProductRepository productRepository = new();
         OrderRepository orderRepository = new();
+        List<Products> productsList = new();
         public CardPage()
         {
             InitializeComponent();
             List<Products> list = new();
 
-            var a = productRepository.GetProductsToBasket();
+            productsList = productRepository.GetProductsToBasket();
 
             int sum = 0;
-            foreach (var item in a)
+            foreach (var item in productsList)
             {
                 sum += item.price;
             }
 
             fullPrice.Text = sum.ToString();
-            ListViewProducts.ItemsSource = a;
+            ListViewProducts.ItemsSource = productsList;
         }
 
         private void btn_Back(object sender, RoutedEventArgs e)
@@ -103,6 +104,23 @@ namespace KwikMart_DesktopApp
             var a = product as Products;
             var id = (product as Products).food_id;
             MessageBox.Show(id.ToString());
+            List<Products> temp = new();
+            foreach (var item in productsList)
+            {
+                if (item.food_id == id)
+                {
+                    //productsList.Remove(item);
+
+                    temp.Add(item);
+                }
+            }
+
+            foreach (var item in temp)
+            {
+                productsList.Remove(item);
+            }
+            ListViewProducts.ItemsSource = null;
+            ListViewProducts.ItemsSource = productsList;
         }
 
         private void OrderButton(object sender, RoutedEventArgs e)

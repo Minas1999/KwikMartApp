@@ -244,18 +244,18 @@
 
         <StackPanel  Margin="0, 20, 0, 0" Grid.Row="0" Grid.Column="0">
             <Border
-                Width="250"
+                Width="280"
                 Height="350"
                 Margin="5"
                 CornerRadius="5"
                 HorizontalAlignment="Left">
 
                 <Border.Background>
-                    <ImageBrush x:Name="image" ImageSource="https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg" />
+                    <ImageBrush x:Name="image" ImageSource="{Binding food_img}" />
                 </Border.Background>
             </Border>
 
-            <Grid Margin="10,40,0,0" HorizontalAlignment="Left" >
+            <Grid Margin="25,40,0,0" HorizontalAlignment="Left" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="75" />
                     <ColumnDefinition Width="100" />
@@ -290,7 +290,7 @@
             <Button HorizontalAlignment="Left"
                 Width="250" 
                     Height="30"
-                Margin="10, 20, 0, 0"
+                Margin="25, 20, 0, 0"
                 Grid.Column="2"
                 Click="ButtonAdd"
                 FontSize="15"

@@ -35,8 +35,9 @@ namespace KwikMart_DesktopApp
             Products pr = new Products();
             pr = productRepository.GetProductByID(foodID);
             MovieTitle.Text = pr.name;
-            
-            //image = pr.img_url;
+            ImageBrush imgBrush = new ImageBrush();
+            imgBrush.ImageSource = new BitmapImage(new Uri(@$"{pr.img_url}", UriKind.Absolute));
+            image.ImageSource = imgBrush.ImageSource;
 
         }
 
@@ -57,7 +58,7 @@ namespace KwikMart_DesktopApp
         {
             int productCount = int.Parse(ButtonCounter.Content.ToString());
 
-            if (productCount > 0)
+            if (productCount > 1)
             {
                 ButtonCounter.Content = productCount - 1;
             }
