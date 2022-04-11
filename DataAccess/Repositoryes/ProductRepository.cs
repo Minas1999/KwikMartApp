@@ -125,5 +125,18 @@ namespace DataAccess.Repositoryes
             }
             return productsList;
         }
+
+        public void ClearProductsFromBasket()
+        {
+            using (SqlConnection conn = ConnectionManager.CreateConnection())
+            {
+                conn.Open();
+                using var cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "TRUNCATE TABLE UserBasket";
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteReader();
+            }
+        }
     }
 }

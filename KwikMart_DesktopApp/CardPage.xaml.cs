@@ -107,9 +107,19 @@ namespace KwikMart_DesktopApp
 
         private void OrderButton(object sender, RoutedEventArgs e)
         {
-            orderRepository.CreaetOrder();
+            var orderID = orderRepository.CreaetOrder();
+            var list = productRepository.GetProductsToBasket();
+
+            foreach (var item in list)
+            {
+                orderRepository.CreateUserOrderFoodsTable(orderID, item.food_id, item.count);
+            }
+
             Box b = new Box();
             b.Show();
+
+            productRepository.ClearProductsFromBasket();
+            ListViewProducts.ItemsSource = null;
         }
     }
 }

@@ -107,5 +107,6 @@
     <None Include="Queryes\StoreProductToUserBasket.sql" />
     <None Include="Queryes\GetUserProductsFromBasket.sql" />
     <None Include="Queryes\CreateOrder.sql" />
+    <None Include="Queryes\CreateUserOrderFoodsTable.sql" />
   </ItemGroup>
 </Project>

@@ -13,5 +13,6 @@ namespace DataAccess.Interfaces
         public Products GetProductByID(int foodID);
         public void AddProductsToBasket(Products basketProducts, int count);
         public List<Products> GetProductsToBasket();
+        public void ClearProductsFromBasket();
     }
 }

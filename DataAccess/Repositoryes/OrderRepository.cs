@@ -7,7 +7,7 @@ namespace DataAccess.Repositoryes
 {
     public class OrderRepository : IOrder
     {
-        public void CreaetOrder()
+        public int CreaetOrder()
         {
             using var conn = ConnectionManager.CreateConnection();
             conn.Open();
@@ -19,12 +19,27 @@ namespace DataAccess.Repositoryes
             cmd.Parameters.AddWithValue("order_time", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
             cmd.Parameters.AddWithValue("summa", 2200);
             cmd.Parameters.AddWithValue("order_userID", 1);
-            cmd.Parameters.Add("@order_id", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.ReturnValue;
+
+            var returnParameter = cmd.Parameters.Add("@orderID", SqlDbType.Int);
+            returnParameter.Direction = ParameterDirection.ReturnValue;
 
             cmd.ExecuteReader();
 
-            int a = (int)cmd.Parameters["@order_id"].Value;
-            
+            return (int)returnParameter.Value;
+        }
+
+        public void CreateUserOrderFoodsTable(int order, int food_id, int count)
+        {
+            using var conn = ConnectionManager.CreateConnection();
+            conn.Open();
+            using var cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "[dbo].[CreateUserOrderFoodsTable]";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("order_id", order);
+            cmd.Parameters.AddWithValue("food_id", food_id);
+            cmd.Parameters.AddWithValue("products_count", count);
+            cmd.ExecuteReader();
         }
     }
 }
