@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Interfaces
 {
-    interface IProduct
+    public interface IProduct
     {
         public List<Products> GetAllProducts();
         public Products GetProductByID(int foodID);

@@ -191,6 +191,20 @@ namespace KwikMart_DesktopApp
             //ListViewProducts.Visibility = Visibility.Visible;
             int index = ListView.SelectedIndex;
             MoveCursorMenu(index);
+
+            List<Products> list = new();
+            if (index == 0)
+            {
+                ListViewProducts.ItemsSource = null;
+                list = productRepository.GetAllProducts();
+                ListViewProducts.ItemsSource = list;
+            }
+            else
+            {
+                ListViewProducts.ItemsSource = null;
+                list = productRepository.GetProductsByCategoryes(index);
+                ListViewProducts.ItemsSource = list;
+            }
         }
 
         private void DepartmentsListViewForHiddenPages(object sender, MouseButtonEventArgs e)

@@ -1,4 +1,6 @@
 using DataAccess;
+using DataAccess.Interfaces;
+using DataAccess.Repositoryes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +33,7 @@ namespace ApiLayer
 
             services.AddControllers();
             services.AddScoped<IUser, UserRepository>();
+            services.AddScoped<IProduct, ProductRepository>();
 
             services.AddIdentityCore<User>();
             services.AddScoped<IUserStore<User>, UserStore>();

@@ -138,5 +138,34 @@ namespace DataAccess.Repositoryes
                 cmd.ExecuteReader();
             }
         }
+
+        public List<Products> GetProductsByCategoryes(int id)
+        {
+            List<Products> productsList = new();
+            using (SqlConnection conn = ConnectionManager.CreateConnection())
+            {
+                conn.Open();
+                using var cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "[dbo].[GetProductsByCategoryes]";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("id", id);
+
+                using SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        productsList.Add(new Products { 
+                            food_id = reader.GetInt32("food_id"),
+                            name = reader.GetString("food_name"),
+                            price = reader.GetInt32("food_price"),
+                            img_url = reader.GetString("food_img_url")
+                        });
+                    }
+                }
+            }
+            return productsList;
+        }
     }
 }

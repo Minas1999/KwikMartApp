@@ -20,7 +20,7 @@ namespace DataAccess
             builder.InitialCatalog = "Kwik4";
             builder.IntegratedSecurity = true;
 
-            ConnectionString = builder.ConnectionString;
+            ConnectionString = "Data Source=SQL8001.site4now.net;Initial Catalog=db_a8588d_kwikmart;User Id=db_a8588d_kwikmart_admin;Password=mlpnko123";//builder.ConnectionString;
         }
 
 
