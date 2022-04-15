@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccess;
+using DataAccess.Models;
 using DataAccess.Repositoryes;
 using System;
 using System.Collections.Generic;
@@ -34,18 +35,32 @@ namespace KwikMart_DesktopApp
             _ = NavigationService.Navigate(null);
         }
 
+        public event EventHandler SomethingHappened;
+        private void MakeSomethingHappen(EventArgs e)
+        {
+            if (SomethingHappened != null)
+            {
+                SomethingHappened(this, e);
+            }
+        }
+
         private void FilterProducts(object sender, RoutedEventArgs e)
         {
             productRepository = new();
 
-            if (Convert.ToBoolean(AjmanKarg.IsChecked))
+            if (Convert.ToBoolean(InASC.IsChecked))
             {
-                MessageBox.Show("c");
-                List<Products> a = (List<Products>)main.ListViewProducts.ItemsSource;
-                //main.ListViewProducts.ItemsSource = from s in a orderby s.
+                ((MainWindow)System.Windows.Application.Current.MainWindow).FilterFoods(FilterProductsEnum.ASC);
+                _ = NavigationService.Navigate(null);
             }
 
-            _ = NavigationService.Navigate(null);
+            if (Convert.ToBoolean(InDESC.IsChecked))
+            {
+                ((MainWindow)System.Windows.Application.Current.MainWindow).FilterFoods(FilterProductsEnum.DESC);
+                _ = NavigationService.Navigate(null);
+            }
+
+
         }
     }
 }

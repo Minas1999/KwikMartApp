@@ -1,9 +1,11 @@
 ﻿//using DataAccess.Models;
+using DataAccess;
 using DataAccess.Models;
 using DataAccess.Repositoryes;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -83,15 +85,15 @@ namespace KwikMart_DesktopApp
         }
         private void Open_Twitter(object sender, RoutedEventArgs e)
         {
-            var psi = new ProcessStartInfo
-            {
-                FileName = "https://www.twitter.com/",
+            //var psi = new ProcessStartInfo
+            //{
+            //    FileName = "https://www.twitter.com/",
 
-                UseShellExecute = true
-            };
-            Process.Start(psi);
-            Profile win2 = new Profile();
-            win2.Show();
+            //    UseShellExecute = true
+            //};
+            //Process.Start(psi);
+            //Profile win2 = new Profile();
+            //win2.Show();
         }
 
 
@@ -147,9 +149,26 @@ namespace KwikMart_DesktopApp
             productScreen.Visibility = Visibility.Visible;
         }
 
-        public void SetUserName()
+        public void FilterFoods(FilterProductsEnum filter)
         {
-            
+
+            switch (filter)
+            {
+                case FilterProductsEnum.ASC:
+                    var list = productRepository.GetAllProducts();
+                    var sortedList = list.OrderBy(x => x.price);
+                    ListViewProducts.ItemsSource = null;
+                    ListViewProducts.ItemsSource = sortedList;
+                    break;
+                case FilterProductsEnum.DESC:
+                    var list1 = productRepository.GetAllProducts();
+                    var sortedList1 = list1.OrderByDescending(x => x.price);
+                    ListViewProducts.ItemsSource = null;
+                    ListViewProducts.ItemsSource = sortedList1;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void SearchProduct(object sender, RoutedEventArgs e)
@@ -181,7 +200,6 @@ namespace KwikMart_DesktopApp
         {
             //_ = NavigationService.Navigate(null);
             //Login l = new Login();
-           
         }
 
         private void DepartmentsListView(object sender, SelectionChangedEventArgs e)

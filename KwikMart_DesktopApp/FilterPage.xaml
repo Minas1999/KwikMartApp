@@ -66,7 +66,7 @@
 
 
                         <RadioButton
-                            Name="AjmanKarg"
+                            Name="InASC"
                             Margin="20,5"
                             Background="#707070"
                             Foreground="#707070"
@@ -74,6 +74,7 @@
                             Աճման կարգով
                         </RadioButton>
                         <RadioButton
+                            Name="InDESC"
                             Margin="20,5"
                             Background="#707070"
                             Foreground="#707070"
