@@ -108,5 +108,6 @@
     <None Include="Queryes\CreateUserOrderFoodsTable.sql" />
     <None Include="Queryes\GetProductsByCategoryes.sql" />
     <None Include="GetCategoryesByDepartmentId.sql" />
+    <None Include="GetAllOrders.sql" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using DataAccess.Models;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 
@@ -37,6 +39,35 @@ namespace DataAccess
                 }
             }
             return Task.FromResult(user);
+        }
+
+
+        public List<UserOrders> GetUserOrders()
+        {
+            List<UserOrders> userOrders = new();
+            using (SqlConnection conn = ConnectionManager.CreateConnection())
+            {
+                conn.Open();
+                using var cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "[dbo].[GetAllOrders]";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        userOrders.Add(new UserOrders()
+                        {
+                            orderID = reader.GetInt32("ord_id"),
+                            orderDate = reader.GetDateTime("ord_date"),
+                            totalAmount = reader.GetInt32("ord_ttl_amount")
+                        });
+                    }
+                }
+            }
+            return userOrders;
         }
     }
 }

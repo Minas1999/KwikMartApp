@@ -1,4 +1,5 @@
 ﻿using DataAccess;
+using DataAccess.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -23,6 +24,12 @@ namespace ApiLayer.Controllers
         public async Task<User> GetUsers()
         {
             return await v.GetUser();
+        }
+
+        [HttpGet("orders")]
+        public List<UserOrders> GetUserOrdersHistory()
+        {
+            return v.GetUserOrders();
         }
     }
 }

@@ -94,7 +94,7 @@ namespace KwikMart_DesktopApp
 
         private void OpenLoginBar(object sender, RoutedEventArgs e)
         {
-            load_frame3.Content = new Login();
+            load_frame3.Content = new OrdersHistory();
             load_frame3.Visibility = Visibility.Visible;
         }
 
