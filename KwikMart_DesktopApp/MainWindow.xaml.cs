@@ -20,30 +20,16 @@ namespace KwikMart_DesktopApp
     {
 
         ProductRepository productRepository;
+        private List<Products> productsList;
         public MainWindow()
         {
 
             InitializeComponent();
             productRepository = new();
 
-            List<Products> list = new();
-            //for (int i = 0; i < 15; i++)
-            //{
-            //    list.Add(new Products()
-            //    {
-            //        name = "aaa",
-            //        count = 5,
-            //        description = "desc",
-            //        food_id = i,
-            //        id = i,
-            //        img_url = "url",
-            //        price = i
-            //    });
-            //}
+            productsList = productRepository.GetAllProducts();
 
-            //list.Add()
-
-            ListViewProducts.ItemsSource = productRepository.GetAllProducts();
+            ListViewProducts.ItemsSource = productsList;
 
         }
 
@@ -85,29 +71,25 @@ namespace KwikMart_DesktopApp
         }
         private void Open_Twitter(object sender, RoutedEventArgs e)
         {
-            //var psi = new ProcessStartInfo
-            //{
-            //    FileName = "https://www.twitter.com/",
+            var psi = new ProcessStartInfo
+            {
+                FileName = "https://www.twitter.com/",
 
-            //    UseShellExecute = true
-            //};
-            //Process.Start(psi);
-            //Profile win2 = new Profile();
-            //win2.Show();
+                UseShellExecute = true
+            };
+            Process.Start(psi);
+            Profile win2 = new Profile();
+            win2.Show();
         }
 
 
         public void AddToCart(object sender, RoutedEventArgs e)
         {
-
             object product = (sender as Button).Tag;
-            var a = product as Products;
             var id = (product as Products).food_id;
-            //_ = MessageBox.Show(id.ToString());
 
             load_frame.Content = new OneProduct(id);
             load_frame.Visibility = Visibility.Visible;
-            //ListViewProducts.Visibility = Visibility.Hidden;
         }
 
         private void OpenLoginBar(object sender, RoutedEventArgs e)
@@ -151,20 +133,15 @@ namespace KwikMart_DesktopApp
 
         public void FilterFoods(FilterProductsEnum filter)
         {
-
             switch (filter)
             {
                 case FilterProductsEnum.ASC:
-                    var list = productRepository.GetAllProducts();
-                    var sortedList = list.OrderBy(x => x.price);
                     ListViewProducts.ItemsSource = null;
-                    ListViewProducts.ItemsSource = sortedList;
+                    ListViewProducts.ItemsSource = productsList.OrderBy(x => x.price);
                     break;
                 case FilterProductsEnum.DESC:
-                    var list1 = productRepository.GetAllProducts();
-                    var sortedList1 = list1.OrderByDescending(x => x.price);
                     ListViewProducts.ItemsSource = null;
-                    ListViewProducts.ItemsSource = sortedList1;
+                    ListViewProducts.ItemsSource = productsList.OrderByDescending(x => x.price);
                     break;
                 default:
                     break;
@@ -184,12 +161,14 @@ namespace KwikMart_DesktopApp
 
         private void SearchProducts()
         {
-            
+            var productsList1 = (from c in productsList
+                                 where c.name.ToUpper().Contains(searchBox.Text.ToUpper())
+                                 select c).ToList();
+            ListViewProducts.ItemsSource = productsList1;
         }
 
-        private void Window_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            //MessageBox.Show("111");
             if (e.Key == Key.Enter)
             {
                 SearchProducts();
@@ -198,30 +177,21 @@ namespace KwikMart_DesktopApp
 
         private void PPP(object sender, MouseButtonEventArgs e)
         {
-            //_ = NavigationService.Navigate(null);
-            //Login l = new Login();
         }
 
         private void DepartmentsListView(object sender, SelectionChangedEventArgs e)
         {
-            //load_frame
-            //.Visibility = Visibility.Hidden;
-            //ListViewProducts.Visibility = Visibility.Visible;
             int index = ListView.SelectedIndex;
             MoveCursorMenu(index);
 
-            List<Products> list = new();
             if (index == 0)
             {
-                ListViewProducts.ItemsSource = null;
-                list = productRepository.GetAllProducts();
-                ListViewProducts.ItemsSource = list;
+                ListViewProducts.ItemsSource = productsList;
             }
             else
             {
                 ListViewProducts.ItemsSource = null;
-                list = productRepository.GetProductsByCategoryes(index);
-                ListViewProducts.ItemsSource = list;
+                ListViewProducts.ItemsSource = productRepository.GetProductsByCategoryes(index);
             }
         }
 

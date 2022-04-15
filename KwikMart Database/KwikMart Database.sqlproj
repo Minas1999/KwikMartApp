@@ -83,6 +83,7 @@
     <Build Include="Tables\Couriers.sql" />
     <Build Include="Tables\CourierOrders.sql" />
     <Build Include="Tables\UserBasket.sql" />
+    <None Include="Queryes\GetAllDepartment.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Links\Figma.tt">
@@ -106,5 +107,6 @@
     <None Include="Queryes\CreateOrder.sql" />
     <None Include="Queryes\CreateUserOrderFoodsTable.sql" />
     <None Include="Queryes\GetProductsByCategoryes.sql" />
+    <None Include="GetCategoryesByDepartmentId.sql" />
   </ItemGroup>
 </Project>

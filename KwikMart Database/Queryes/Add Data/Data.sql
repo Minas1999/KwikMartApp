@@ -104,3 +104,6 @@ exec GetFoodByFoodID @food_id = 3
 
 ----SELECT @SQL 
 --EXEC(@SQL)
+
+
+select * from Departments

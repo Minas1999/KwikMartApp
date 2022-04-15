@@ -34,6 +34,7 @@ namespace ApiLayer
             services.AddControllers();
             services.AddScoped<IUser, UserRepository>();
             services.AddScoped<IProduct, ProductRepository>();
+            services.AddScoped<IDepartment, DepartmentRepository>();
 
             services.AddIdentityCore<User>();
             services.AddScoped<IUserStore<User>, UserStore>();
@@ -41,7 +42,7 @@ namespace ApiLayer
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiLayer", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Kwikmart", Version = "v1" });
             });
         }
 
@@ -52,7 +53,7 @@ namespace ApiLayer
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiLayer v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Kwikmart v1"));
             }
 
             app.UseHttpsRedirection();

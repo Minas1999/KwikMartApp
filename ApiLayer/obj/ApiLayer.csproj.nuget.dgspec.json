@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\ApiLayer\\ApiLayer.csproj": {}
+    "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\ApiLayer\\ApiLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\ApiLayer\\ApiLayer.csproj": {
+    "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\ApiLayer\\ApiLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\ApiLayer\\ApiLayer.csproj",
+        "projectUniqueName": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\ApiLayer\\ApiLayer.csproj",
         "projectName": "ApiLayer",
-        "projectPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\ApiLayer\\ApiLayer.csproj",
+        "projectPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\ApiLayer\\ApiLayer.csproj",
         "packagesPath": "C:\\Users\\minas.sandadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\ApiLayer\\obj\\",
+        "outputPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\ApiLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,8 +34,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\minas.sandadze\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApp00\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

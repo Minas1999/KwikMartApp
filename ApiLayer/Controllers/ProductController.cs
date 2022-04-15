@@ -26,5 +26,18 @@ namespace ApiLayer.Controllers
         {
             return product.GetAllProducts();
         }
+
+
+        [HttpGet("ID")]
+        public Products GetProdyctByID(int productID)
+        {
+            return product.GetProductByID(productID);
+        }
+
+        [HttpGet("User/Basket")]
+        public List<Products> GetProductsFromUserBasket()
+        {
+            return product.GetProductsToBasket();
+        }
     }
 }

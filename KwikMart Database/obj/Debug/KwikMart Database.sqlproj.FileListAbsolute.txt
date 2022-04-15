@@ -54,3 +54,9 @@ C:\Users\minas.sandadze\Source\Repos\KwikMartApp00\KwikMart Database\bin\Debug\K
 C:\Users\minas.sandadze\Source\Repos\KwikMartApp00\KwikMart Database\bin\Debug\KwikMart_Database.pdb
 C:\Users\minas.sandadze\Source\Repos\KwikMartApp00\KwikMart Database\obj\Debug\KwikMart_Database.dll
 C:\Users\minas.sandadze\Source\Repos\KwikMartApp00\KwikMart Database\obj\Debug\KwikMart_Database.pdb
+C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\KwikMart Database\bin\Debug\KwikMart Database.dacpac
+C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\KwikMart Database\bin\Debug\KwikMart_Database.dll
+C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\KwikMart Database\bin\Debug\KwikMart_Database.pdb
+C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\KwikMart Database\obj\Debug\KwikMart Database.sqlproj.AssemblyReference.cache
+C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\KwikMart Database\obj\Debug\KwikMart_Database.dll
+C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\KwikMart Database\obj\Debug\KwikMart_Database.pdb
