@@ -31,6 +31,17 @@ namespace KwikMart_DesktopApp
             DataTable table = new();
             var productsList = userRepository.GetUserOrders();
 
+
+
+            //table.Columns.Add(new DataColumn()
+            //{
+            //    DataType = typeof(string),
+            //    ColumnName = "ID",
+            //    Caption = "Order Id",
+            //    ReadOnly = true,
+            //    Unique = true
+            //});
+
             table.Columns.Add("ID", typeof(string));
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Summa", typeof(string));
@@ -41,6 +52,11 @@ namespace KwikMart_DesktopApp
             }
 
             DataGrid.ItemsSource = table.DefaultView;
+        }
+
+        private void CloseUserOrdersHistory(object sender, RoutedEventArgs e)
+        {
+            _ = NavigationService.Navigate(null);
         }
     }
 }
