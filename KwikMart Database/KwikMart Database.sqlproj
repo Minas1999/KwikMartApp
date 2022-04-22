@@ -109,5 +109,7 @@
     <None Include="Queryes\GetProductsByCategoryes.sql" />
     <None Include="GetCategoryesByDepartmentId.sql" />
     <None Include="GetAllOrders.sql" />
+    <None Include="Queryes\UserLogin.sql" />
+    <None Include="Queryes\Registration.sql" />
   </ItemGroup>
 </Project>

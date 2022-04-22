@@ -125,7 +125,7 @@ namespace KwikMart_DesktopApp
 
         private void OrderButton(object sender, RoutedEventArgs e)
         {
-            var orderID = orderRepository.CreaetOrder();
+            var orderID = orderRepository.CreaetOrder(Login.currentUser.Id);
             var list = productRepository.GetProductsToBasket();
 
             foreach (var item in list)

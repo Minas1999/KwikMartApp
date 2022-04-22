@@ -29,7 +29,7 @@ namespace KwikMart_DesktopApp
             InitializeComponent();
 
             DataTable table = new();
-            var productsList = userRepository.GetUserOrders();
+            var productsList = userRepository.GetUserOrders(Login.currentUser.Id);
 
 
 
@@ -52,6 +52,15 @@ namespace KwikMart_DesktopApp
             }
 
             DataGrid.ItemsSource = table.DefaultView;
+
+
+            User user = Login.currentUser;
+
+            name.Text = user.Name.ToString();
+            address.Text = user.Address.ToString();
+            address1.Text = user.Address.ToString();
+            Phone_number.Text = user.Phone_number.ToString();
+            Gmail.Text = user.Gmail.ToString();
         }
 
         private void CloseUserOrdersHistory(object sender, RoutedEventArgs e)

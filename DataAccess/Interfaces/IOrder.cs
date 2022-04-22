@@ -9,7 +9,7 @@ namespace DataAccess.Interfaces
 {
     public interface IOrder
     {
-        public int CreaetOrder();
+        public int CreaetOrder(int userID);
 
         public void CreateUserOrderFoodsTable(int order, int food_id, int count);
     }

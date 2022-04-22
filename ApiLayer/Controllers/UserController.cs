@@ -26,10 +26,10 @@ namespace ApiLayer.Controllers
             return await v.GetUser();
         }
 
-        [HttpGet("orders")]
-        public List<UserOrders> GetUserOrdersHistory()
-        {
-            return v.GetUserOrders();
-        }
+        //[HttpGet("orders")]
+        //public List<UserOrders> GetUserOrdersHistory()
+        //{
+        //    return v.GetUserOrders(Login.);
+        //}
     }
 }

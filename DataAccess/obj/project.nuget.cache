@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f9Pgw9H9EtNfUygMjKboYiAKEyK/63NpTmfm5rikFd0VbQRXfh6uN867BDJlcW/9anRL1FzK6vo4l02cps5nog==",
+  "dgSpecHash": "wcVoKCSrWTChwQtZZqRV5Ok0ckysiQOqEB0M3j5XPXWU86Mzvfy02R+5FGjrb9kOFhcpo+28JdtCH00Wl7jCYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartAppm\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\minas.sandadze\\Source\\Repos\\KwikMartApptre\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\minas.sandadze\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
     "C:\\Users\\minas.sandadze\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",

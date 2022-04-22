@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,12 @@ namespace KwikMart_DesktopApp
     /// </summary>
     public partial class Login : Page
     {
+        private readonly UserRepository userRepository;
+        public static bool isLogin = false;
+        public static User currentUser;
         public Login()
         {
+            userRepository = new();
             InitializeComponent();
         }
 
@@ -44,6 +49,20 @@ namespace KwikMart_DesktopApp
         private void CloseUserProfile(object sender, EventArgs e)
         {
             _ = NavigationService.Navigate(null);
+        }
+
+        private void OpenProfile(object sender, RoutedEventArgs e)
+        {
+            currentUser = userRepository.LoginUser(gmail.Text, password.Password.ToString());
+            if (currentUser != null)
+            {
+                isLogin = true;
+                _ = NavigationService.Navigate(null);
+            }
+            else
+            {
+                MessageBox.Show("chka");
+            }
         }
     }
 }

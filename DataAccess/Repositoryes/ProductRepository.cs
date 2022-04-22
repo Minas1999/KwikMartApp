@@ -12,7 +12,7 @@ namespace DataAccess.Repositoryes
 {
     public class ProductRepository : IProduct
     {
-        public void AddProductsToBasket(Products product, int count)
+        public void AddProductsToBasket(int userID, Products product, int count)
         {
             using (SqlConnection conn = ConnectionManager.CreateConnection())
             {
@@ -21,7 +21,7 @@ namespace DataAccess.Repositoryes
                 cmd.Connection = conn;
                 cmd.CommandText = "[dbo].[StoreProductsToUserBasket1]";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("user_id", 1);
+                cmd.Parameters.AddWithValue("user_id", userID);
                 cmd.Parameters.AddWithValue("food_id", product.food_id);
                 cmd.Parameters.AddWithValue("food_name", product.name);
                 cmd.Parameters.AddWithValue("food_price", product.price);

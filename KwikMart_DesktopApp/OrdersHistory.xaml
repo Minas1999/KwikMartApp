@@ -27,22 +27,22 @@
                 </Border.Background>
             </Border>
 
-            <TextBlock Text="Մինաս Սանդաձե" HorizontalAlignment="Center" Margin="0 10 0 0" Foreground="Gray" FontSize="18" FontWeight="Bold"/>
-            <TextBlock Text="Ավան-Առինջ" FontSize="13" Foreground="Gray" HorizontalAlignment="Center" Opacity="0.8"/>
+            <TextBlock x:Name="name" Text="{Binding Name}" HorizontalAlignment="Center" Margin="0 10 0 0" Foreground="Gray" FontSize="18" FontWeight="Bold"/>
+            <TextBlock x:Name="address" Text="{Binding Address}" FontSize="13" Foreground="Gray" HorizontalAlignment="Center" Opacity="0.8"/>
             <TextBlock Text="-------------------------------------------------" FontSize="8" Foreground="Gray" HorizontalAlignment="Center" Opacity="0.8"/>
 
             <StackPanel Margin="20">
                 <StackPanel Orientation="Horizontal" Margin="0 3">
                     <materialDesign:PackIcon Kind="Location" Foreground="Gray"/>
-                    <TextBlock Text="Ավան-Առինջ, Կոտայքի մարզ" Margin="10 0" Foreground="Gray"/>
+                    <TextBlock x:Name="address1" Text="{Binding Address}" Margin="10 0" Foreground="Gray"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 3">
                     <materialDesign:PackIcon Kind="Cellphone" Foreground="Gray"/>
-                    <TextBlock Text="+374 91 386888" Margin="10 0" Foreground="Gray"/>
+                    <TextBlock x:Name="Phone_number" Text="{Binding Phone_number}" Margin="10 0" Foreground="Gray"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 3">
                     <materialDesign:PackIcon Kind="Email" Foreground="Gray"/>
-                    <TextBlock Text="mss.sandadze@gmail.com" Margin="10 0" Foreground="Gray"/>
+                    <TextBlock x:Name="Gmail" Text="{Binding Gmail}" Margin="10 0" Foreground="Gray"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

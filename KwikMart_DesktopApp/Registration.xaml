@@ -56,30 +56,35 @@
 
                     <StackPanel Margin="10,-50,10,15" VerticalAlignment="Center">
                         <TextBox
+                            x:Name="name"
                             Margin="0,5"
                             materialDesign:HintAssist.Hint="Անուն Ազգանուն"
                             FontFamily="Champagne &amp; Limousines"
                             FontSize="12"
                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         <TextBox
+                            x:Name="phone"
                             Margin="0,5"
                             materialDesign:HintAssist.Hint="Հեռախոսահամար"
                             FontFamily="Champagne &amp; Limousines"
                             FontSize="12"
                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         <TextBox
+                            x:Name="userGmail"
                             Margin="0,5"
-                            materialDesign:HintAssist.Hint="Մուտքանուն"
+                            materialDesign:HintAssist.Hint="Էլ. հասցե"
                             FontFamily="Champagne &amp; Limousines"
                             FontSize="12"
                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         <PasswordBox
+                            x:Name="password"
                             Margin="0,5"
                             materialDesign:HintAssist.Hint="Գաղտնաբառ"
                             FontFamily="Champagne &amp; Limousines"
                             FontSize="12"
                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
                         <TextBox
+                            x:Name="address"
                             Margin="0,5"
                             materialDesign:HintAssist.Hint="Հասցե"
                             FontFamily="Champagne &amp; Limousines"
@@ -143,6 +148,7 @@
                 </Grid>
 
                 <Button
+                    Click="Registration1"
                     Width="150"
                     Margin="0,100"
                     HorizontalAlignment="Center"

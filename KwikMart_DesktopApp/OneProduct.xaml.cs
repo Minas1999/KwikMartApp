@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace KwikMart_DesktopApp
 {
-    /// <summary>
-    /// Interaction logic for OneProduct.xaml
-    /// </summary>
     public partial class OneProduct : Page
     {
         private readonly int foodID;
@@ -72,13 +69,21 @@ namespace KwikMart_DesktopApp
 
         private void ButtonAdd(object sender, RoutedEventArgs e)
         {
-            Products pr = new Products();
-            pr = productRepository.GetProductByID(foodID);
-            productRepository.AddProductsToBasket(pr, int.Parse(ButtonCounter.Content.ToString()));
+            if (Login.isLogin)
+            {
+                Products pr = new Products();
+                pr = productRepository.GetProductByID(foodID);
+                productRepository.AddProductsToBasket(Login.currentUser.Id, pr, int.Parse(ButtonCounter.Content.ToString()));
 
-            MessageBox.Show("Ավելացավ զամբյուղում");
+                MessageBox.Show("Ավելացավ զամբյուղում");
 
-            NavigationService.Navigate(null);
+                NavigationService.Navigate(null);
+            }
+            else
+            {
+                MessageBox.Show("Ավելացնելու համար մուտք գործեք ձեր էջ");
+            }
+
         }
     }
 }

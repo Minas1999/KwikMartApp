@@ -10,7 +10,9 @@ namespace DataAccess
     public interface IUser
     {
         public Task<User> GetUser();
+        public User LoginUser(string userGmail, string password);
+        public bool Registration(string username, string userPhoneNumber, string userGmail, string useraddres, string password);
 
-        public List<UserOrders> GetUserOrders();
+        public List<UserOrders> GetUserOrders(int userID);
     }
 }

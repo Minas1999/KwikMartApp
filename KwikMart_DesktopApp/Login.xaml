@@ -35,8 +35,8 @@
                 <Grid VerticalAlignment="Top" Margin="35,130" Height="240">
                     
                     <StackPanel VerticalAlignment="Center" Margin="15">
-                        <TextBox Margin="0,10" materialDesign:HintAssist.Hint="Մուտքանուն" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="12"/>
-                        <PasswordBox Margin="0,10" materialDesign:HintAssist.Hint="Գաղտնաբառ" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="12"/>
+                        <TextBox x:Name="gmail" Margin="0,10" materialDesign:HintAssist.Hint="Մուտքանուն" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="12"/>
+                        <PasswordBox x:Name="password" Margin="0,10" materialDesign:HintAssist.Hint="Գաղտնաբառ" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="12"/>
                     </StackPanel>
                     
                     <StackPanel Orientation="Horizontal" Margin="10,200, 10, 0">

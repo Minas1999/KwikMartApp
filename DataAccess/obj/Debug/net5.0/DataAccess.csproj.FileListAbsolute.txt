@@ -117,3 +117,15 @@ C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\DataAccess\obj\Debug\net5.0\Da
 C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\DataAccess\obj\Debug\net5.0\DataAccess.dll
 C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 C:\Users\minas.sandadze\Source\Repos\KwikMartAppm\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\bin\Debug\net5.0\DataAccess.dll
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\obj\Debug\net5.0\DataAccess.dll
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\Users\minas.sandadze\Source\Repos\KwikMartApptre\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache

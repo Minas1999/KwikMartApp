@@ -10,7 +10,7 @@ namespace DataAccess.Repositoryes
 {
     public class OrderRepository : IOrder
     {
-        public int CreaetOrder()
+        public int CreaetOrder(int userID)
         {
             using var conn = ConnectionManager.CreateConnection();
             conn.Open();
@@ -21,7 +21,7 @@ namespace DataAccess.Repositoryes
             cmd.Parameters.AddWithValue("ord_date", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
             cmd.Parameters.AddWithValue("order_time", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
             cmd.Parameters.AddWithValue("summa", 2200);
-            cmd.Parameters.AddWithValue("order_userID", 1);
+            cmd.Parameters.AddWithValue("order_userID", userID);
 
             var returnParameter = cmd.Parameters.Add("@orderID", SqlDbType.Int);
             returnParameter.Direction = ParameterDirection.ReturnValue;

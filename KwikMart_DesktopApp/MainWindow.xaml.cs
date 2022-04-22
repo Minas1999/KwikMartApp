@@ -85,17 +85,30 @@ namespace KwikMart_DesktopApp
 
         public void AddToCart(object sender, RoutedEventArgs e)
         {
-            object product = (sender as Button).Tag;
-            var id = (product as Products).food_id;
+                object product = (sender as Button).Tag;
+                var id = (product as Products).food_id;
 
-            load_frame.Content = new OneProduct(id);
-            load_frame.Visibility = Visibility.Visible;
+                load_frame.Content = new OneProduct(id);
+                load_frame.Visibility = Visibility.Visible;
+            
+
+            
         }
 
         private void OpenLoginBar(object sender, RoutedEventArgs e)
         {
-            load_frame3.Content = new OrdersHistory();
-            load_frame3.Visibility = Visibility.Visible;
+            if (!Login.isLogin)
+            {
+                load_frame3.Content = new Login();
+                load_frame3.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                load_frame3.Content = new OrdersHistory();
+                load_frame3.Visibility = Visibility.Visible;
+
+            }
+
         }
 
         private void oooo(object sender, MouseEventArgs e)
@@ -111,13 +124,20 @@ namespace KwikMart_DesktopApp
 
         private void Button_Basket(object sender, RoutedEventArgs e)
         {
-            CardPage shoppingBasketPage;
-            listViewDepartments.Visibility = Visibility.Collapsed;
-            productScreen.Visibility = Visibility.Collapsed;
+            if (Login.isLogin)
+            {
+                CardPage shoppingBasketPage;
+                listViewDepartments.Visibility = Visibility.Collapsed;
+                productScreen.Visibility = Visibility.Collapsed;
 
-            shoppingBasketPage = new CardPage();
-            shoppingBasketPage.main = this;
-            fullScreen.Children.Add(shoppingBasketPage);
+                shoppingBasketPage = new CardPage();
+                shoppingBasketPage.main = this;
+                fullScreen.Children.Add(shoppingBasketPage);
+            }
+            else
+            {
+                MessageBox.Show("Մուտք գործեք ձեր էջ");
+            }
         }
 
         public void MoveCursorMenu(int index)
@@ -155,7 +175,14 @@ namespace KwikMart_DesktopApp
 
         private void LogOut(object sender, RoutedEventArgs e)
         {
-
+            if (Login.isLogin)
+            {
+                if (MessageBox.Show("Դուք ցանկանում եք դու՞րս գալ ձեր կայքից։",
+                    "Զգուշացում", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    Login.isLogin = false;
+                }
+            }
         }
 
 

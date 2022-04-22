@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,23 +21,12 @@ namespace KwikMart_DesktopApp
     /// </summary>
     public partial class Registration : Page
     {
+        private readonly UserRepository userRepository;
         public Registration()
         {
+            this.userRepository = new();
             InitializeComponent();
-            //GetLocationEvent();
         }
-        //GeoCoordinateWatcher watcher;
-
-        //void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
-        //{
-        //    PrintPosition(e.Position.Location.Latitude, e.Position.Location.Longitude);
-        //}
-        //void PrintPosition(double Latitude, double Longitude)
-        //{
-        //    MessageBox.Show("latitude" + Latitude + "longitude" + Longitude);
-        //    txtLatitude.Text = Latitude.ToString();
-        //    txtLongitude.Text = Longitude.ToString();
-        //}
 
         private void CloseUserProfile(object sender, EventArgs e)
         {
@@ -46,6 +36,21 @@ namespace KwikMart_DesktopApp
         private void GetCurrentLocation(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("ok");
+        }
+
+
+
+        private void Registration1(object sender, RoutedEventArgs e)
+        {
+            if (userRepository.Registration(name.Text, phone.Text, userGmail.Text, address.Text, password.Password.ToString()))
+            {
+                if(userRepository.LoginUser(userGmail.Text, password.Password.ToString()) != null)
+                {
+                    Login.isLogin = true;
+                    MessageBox.Show("Շնորհակալություն գրանցվելու համար");
+                }
+            }
+            _ = NavigationService.Navigate(null);
         }
     }
 }
