@@ -402,8 +402,15 @@
                     Foreground="Black"
                     Text="128 հատ" />
 
-                <materialDesign:RatingBar Grid.Row="1" Grid.Column="1" Max="5"
-                                 Margin="40,0,0,0" Value="{Binding Value1, Mode=TwoWay}" />
+                <materialDesign:RatingBar 
+                    MouseDoubleClick="GetRating"
+                    IsReadOnly="True" 
+                    x:Name="rating" 
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    Max="5"
+                    Margin="40,0,0,0" 
+                    Value="{Binding Value1, Mode=TwoWay}" />
 
             </Grid>
 

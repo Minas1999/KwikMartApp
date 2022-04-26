@@ -85,5 +85,18 @@ namespace KwikMart_DesktopApp
             }
 
         }
+
+        private void GetRating(object sender, MouseButtonEventArgs e)
+        {
+            if (!Login.isLogin)
+            {
+                MessageBox.Show("Գնահատելու համար նախ և առաջ մուտք գործեք ձեր կայք");
+            }
+            else
+            {
+                rating.IsReadOnly = false;
+                MessageBox.Show(rating.Value.ToString());
+            }
+        }
     }
 }

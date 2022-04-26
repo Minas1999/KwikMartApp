@@ -84,6 +84,7 @@
     <Build Include="Tables\CourierOrders.sql" />
     <Build Include="Tables\UserBasket.sql" />
     <None Include="Queryes\GetAllDepartment.sql" />
+    <Build Include="Tables\Ingredients.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Links\Figma.tt">
