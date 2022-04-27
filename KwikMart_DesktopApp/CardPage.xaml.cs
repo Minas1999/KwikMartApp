@@ -34,7 +34,7 @@ namespace KwikMart_DesktopApp
             InitializeComponent();
             List<Products> list = new();
 
-            productsList = productRepository.GetProductsToBasket();
+            productsList = productRepository.GetProductsToBasket(Login.currentUser.Id);
 
             int sum = 0;
             foreach (var item in productsList)
@@ -44,6 +44,7 @@ namespace KwikMart_DesktopApp
 
             fullPrice.Text = sum.ToString();
             ListViewProducts.ItemsSource = productsList;
+            resetPrice();
         }
 
         private void btn_Back(object sender, RoutedEventArgs e)
@@ -55,7 +56,13 @@ namespace KwikMart_DesktopApp
 
         private void resetPrice()
         {
-
+            int foodPrice = 0;
+            foreach (var row in productsList)
+            {
+                foodPrice += row.price;
+            }
+            price.Text = foodPrice.ToString();
+            fullPrice.Text = (200 + foodPrice).ToString();
         }
 
 
@@ -126,7 +133,7 @@ namespace KwikMart_DesktopApp
         private void OrderButton(object sender, RoutedEventArgs e)
         {
             var orderID = orderRepository.CreaetOrder(Login.currentUser.Id);
-            var list = productRepository.GetProductsToBasket();
+            var list = productRepository.GetProductsToBasket(Login.currentUser.Id);
 
             foreach (var item in list)
             {

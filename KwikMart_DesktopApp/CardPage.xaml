@@ -264,21 +264,21 @@
                     VerticalAlignment="Top"
                     FontSize="17"
                     Foreground="White"
-                    Text="20" />
+                    Text="200" />
                 <TextBlock
                     x:Name="price"
                     Margin="174,127,20,0"
                     VerticalAlignment="Top"
                     FontSize="17"
                     Foreground="White"
-                    Text="800" />
+                    Text="{Binding price}" />
                 <TextBlock
                     x:Name="fullPrice"
                     Margin="174,218,20,0"
                     VerticalAlignment="Top"
                     FontSize="17"
                     Foreground="White"
-                    Text="800" />
+                    Text="{Binding fullPrice}" />
 
                 <Button
                     x:Name="btn"

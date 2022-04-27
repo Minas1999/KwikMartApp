@@ -30,6 +30,15 @@ namespace KwikMart_DesktopApp
             productsList = productRepository.GetAllProducts();
 
             ListViewProducts.ItemsSource = productsList;
+            if (Login.isLogin)
+            {
+                count.Text = productRepository.GetProductsToBasket(Login.currentUser.Id).Count.ToString();
+            }
+            else
+            {
+                count.Text = "0";
+            }
+            
 
         }
 

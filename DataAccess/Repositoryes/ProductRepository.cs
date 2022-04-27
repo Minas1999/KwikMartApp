@@ -57,7 +57,9 @@ namespace DataAccess.Repositoryes
                             name = reader.GetString(reader.GetOrdinal("food_name")),
                             price = reader.GetInt32(reader.GetOrdinal("food_price")),
                             description = reader.GetString(reader.GetOrdinal("food_desc")),
-                            img_url = reader.GetString(reader.GetOrdinal("food_img_url"))
+                            img_url = reader.GetString(reader.GetOrdinal("food_img_url")),
+                            country = reader.GetString(reader.GetOrdinal("CountryOfProduction")),
+                            rating = reader.GetDecimal(reader.GetOrdinal("Rating"))
                         });
                     }
                 }
@@ -88,6 +90,7 @@ namespace DataAccess.Repositoryes
                         product.price = reader.GetInt32(reader.GetOrdinal("food_price"));
                         product.description = reader.GetString(reader.GetOrdinal("food_desc"));
                         product.img_url = reader.GetString(reader.GetOrdinal("food_img_url"));
+                        product.country = reader.GetString(reader.GetOrdinal("CountryOfProduction"));
 
                     }
                 }
@@ -95,7 +98,7 @@ namespace DataAccess.Repositoryes
             return product;
         }
 
-        public List<Products> GetProductsToBasket()
+        public List<Products> GetProductsToBasket(int userID)
         {
             List<Products> productsList = new();
             using (SqlConnection conn = ConnectionManager.CreateConnection())
@@ -105,6 +108,7 @@ namespace DataAccess.Repositoryes
                 cmd.Connection = conn;
                 cmd.CommandText = "[dbo].[GetUserProductsFromBasket]";
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@user_id", userID);
 
                 using SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)

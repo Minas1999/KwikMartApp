@@ -37,7 +37,7 @@ namespace ApiLayer.Controllers
         [HttpGet("User/Basket")]
         public List<Products> GetProductsFromUserBasket()
         {
-            return product.GetProductsToBasket();
+            return product.GetProductsToBasket(1);
         }
     }
 }

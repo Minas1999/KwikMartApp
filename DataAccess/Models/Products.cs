@@ -15,11 +15,13 @@ namespace DataAccess.Models
 		public string description { get; set; }
 		public string img_url { get; set; }
 		public int count { get; set; }
+		public string country { get; set; }
+		public decimal rating { get; set; }
 
 
 		public Products() { }
 
-		public Products(int id, int food_id, string name, int price, string description, string url, int count)
+		public Products(int id, int food_id, string name, int price, string description, string url, int count, string country, decimal rating)
 		{
 			this.id = id;
 			this.food_id = food_id;
@@ -28,6 +30,8 @@ namespace DataAccess.Models
 			this.description = description;
 			this.img_url = url;
 			this.count = count;
+			this.country = country;
+			this.rating = rating;
 		}
 	}
 }

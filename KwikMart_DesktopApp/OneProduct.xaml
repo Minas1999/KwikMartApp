@@ -353,13 +353,13 @@
                     Foreground="Black"
                     Text="Ալյուր, աղ, ջուր, խմորիչ:" />
                 <TextBlock
-                    x:Name="MovieDuraction"
+                    x:Name="Country"
                     Grid.Row="1"
                     Grid.Column="1"
                     Margin="60,0,0,0"
                     FontSize="15"
                     Foreground="Black"
-                    Text="Հայաստան" />
+                    Text="{Binding country}" />
             </Grid>
 
             <TextBlock

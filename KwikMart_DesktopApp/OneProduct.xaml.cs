@@ -36,6 +36,10 @@ namespace KwikMart_DesktopApp
             imgBrush.ImageSource = new BitmapImage(new Uri(@$"{pr.img_url}", UriKind.Absolute));
             image.ImageSource = imgBrush.ImageSource;
 
+            //rating.IsReadOnly = false;
+            rating.Value = 1;
+            Country.Text = pr.country;
+
         }
 
         private void ButtonPlus(object sender, RoutedEventArgs e)
@@ -88,15 +92,15 @@ namespace KwikMart_DesktopApp
 
         private void GetRating(object sender, MouseButtonEventArgs e)
         {
-            if (!Login.isLogin)
-            {
-                MessageBox.Show("Գնահատելու համար նախ և առաջ մուտք գործեք ձեր կայք");
-            }
-            else
-            {
-                rating.IsReadOnly = false;
-                MessageBox.Show(rating.Value.ToString());
-            }
+            //if (!Login.isLogin)
+            //{
+            //    MessageBox.Show("Գնահատելու համար նախ և առաջ մուտք գործեք ձեր կայք");
+            //}
+            //else
+            //{
+            //    rating.IsReadOnly = false;
+            //    MessageBox.Show(rating.Value.ToString());
+            //}
         }
     }
 }
