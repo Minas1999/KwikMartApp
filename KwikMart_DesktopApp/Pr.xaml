@@ -27,7 +27,7 @@
                 </Border.Background>
             </Border>
 
-            <TextBlock Text="Մինաս Սանդաձե" HorizontalAlignment="Center" Margin="0 10 0 0" Foreground="Gray" FontSize="18" FontWeight="Bold"/>
+            <TextBlock Text="Մինաս Սանդաձե1" HorizontalAlignment="Center" Margin="0 10 0 0" Foreground="Gray" FontSize="18" FontWeight="Bold"/>
             <TextBlock Text="Ավան-Առինջ" FontSize="13" Foreground="Gray" HorizontalAlignment="Center" Opacity="0.8"/>
             <TextBlock Text="-------------------------------------------------" FontSize="8" Foreground="Gray" HorizontalAlignment="Center" Opacity="0.8"/>
 

@@ -24,6 +24,7 @@ namespace KwikMart_DesktopApp
         private readonly UserRepository userRepository;
         public static bool isLogin = false;
         public static User currentUser;
+        public MainWindow main { get; set; }
         public Login()
         {
             userRepository = new();
@@ -61,8 +62,14 @@ namespace KwikMart_DesktopApp
             }
             else
             {
-                MessageBox.Show("chka");
+                MessageBox.Show("Տվյալ Մուտքանունով և գաղտնաբառով տվյալներ չկան");
             }
+        }
+
+        private void facebook(object sender, RoutedEventArgs e)
+        {
+            gmail.Text = "mss.sandadze@gmail.com";
+            password.Password = "12345678";
         }
     }
 }

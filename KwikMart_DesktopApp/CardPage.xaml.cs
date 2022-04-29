@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccess;
+using DataAccess.Models;
 using DataAccess.Repositoryes;
 using System;
 using System.Collections.Generic;
@@ -34,17 +35,35 @@ namespace KwikMart_DesktopApp
             InitializeComponent();
             List<Products> list = new();
 
-            productsList = productRepository.GetProductsToBasket(Login.currentUser.Id);
+            User user = Login.currentUser;
 
-            int sum = 0;
-            foreach (var item in productsList)
+            name.Text = user.Name.ToString();
+            address.Text = user.Address.ToString();
+            address1.Text = user.Address.ToString();
+            phone.Text = user.Phone_number.ToString();
+            gmail.Text = user.Gmail.ToString();
+
+            productsList = productRepository.GetProductsToBasket(Login.currentUser.Id);
+            if (productsList.Count == 0)
             {
-                sum += item.price;
+                fullPrice.Text = "0";
+                Araqum.Text = "0";
+                price.Text = "0";
+            }
+            else
+            {
+                int sum = 0;
+                foreach (var item in productsList)
+                {
+                    sum += item.price;
+                }
+
+                fullPrice.Text = sum.ToString();
+                ListViewProducts.ItemsSource = productsList;
+                resetPrice();
             }
 
-            fullPrice.Text = sum.ToString();
-            ListViewProducts.ItemsSource = productsList;
-            resetPrice();
+            
         }
 
         private void btn_Back(object sender, RoutedEventArgs e)
@@ -56,13 +75,22 @@ namespace KwikMart_DesktopApp
 
         private void resetPrice()
         {
-            int foodPrice = 0;
-            foreach (var row in productsList)
+            if (productsList.Count == 0)
             {
-                foodPrice += row.price;
+                fullPrice.Text = "0";
+                Araqum.Text = "0";
+                price.Text = "0";
             }
-            price.Text = foodPrice.ToString();
-            fullPrice.Text = (200 + foodPrice).ToString();
+            else
+            {
+                int foodPrice = 0;
+                foreach (var row in productsList)
+                {
+                    foodPrice += row.price;
+                }
+                price.Text = foodPrice.ToString();
+                fullPrice.Text = (200 + foodPrice).ToString();
+            }
         }
 
 
@@ -116,8 +144,6 @@ namespace KwikMart_DesktopApp
             {
                 if (item.food_id == id)
                 {
-                    //productsList.Remove(item);
-
                     temp.Add(item);
                 }
             }
@@ -126,8 +152,10 @@ namespace KwikMart_DesktopApp
             {
                 productsList.Remove(item);
             }
+            productRepository.DeleteProductFromBasket(Login.currentUser.Id, id);
             ListViewProducts.ItemsSource = null;
             ListViewProducts.ItemsSource = productsList;
+            resetPrice();
         }
 
         private void OrderButton(object sender, RoutedEventArgs e)

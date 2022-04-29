@@ -14,5 +14,9 @@ namespace DataAccess.Interfaces
         public void AddProductsToBasket(int userID, Products basketProducts, int count);
         public List<Products> GetProductsToBasket(int user_id);
         public void ClearProductsFromBasket();
+
+        public void DeleteProductFromBasket(int userID, int ProductID);
+
+        public int GetProductOrderCount(int productID);
     }
 }

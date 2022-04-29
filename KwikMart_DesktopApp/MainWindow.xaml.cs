@@ -30,16 +30,14 @@ namespace KwikMart_DesktopApp
             productsList = productRepository.GetAllProducts();
 
             ListViewProducts.ItemsSource = productsList;
-            if (Login.isLogin)
-            {
-                count.Text = productRepository.GetProductsToBasket(Login.currentUser.Id).Count.ToString();
-            }
-            else
-            {
-                count.Text = "0";
-            }
-            
 
+            changeCountToBasket();
+
+        }
+
+        public void changeCountToBasket()
+        {
+            count.Text = Login.isLogin ? productRepository.GetProductsToBasket(Login.currentUser.Id).Count.ToString() : "0";
         }
 
         public static void getProductsFromBasketList()
@@ -94,14 +92,11 @@ namespace KwikMart_DesktopApp
 
         public void AddToCart(object sender, RoutedEventArgs e)
         {
-                object product = (sender as Button).Tag;
-                var id = (product as Products).food_id;
+            object product = (sender as Button).Tag;
+            int id = (product as Products).food_id;
 
-                load_frame.Content = new OneProduct(id);
-                load_frame.Visibility = Visibility.Visible;
-            
-
-            
+            load_frame.Content = new OneProduct(id);
+            load_frame.Visibility = Visibility.Visible;
         }
 
         private void OpenLoginBar(object sender, RoutedEventArgs e)
@@ -171,6 +166,14 @@ namespace KwikMart_DesktopApp
                 case FilterProductsEnum.DESC:
                     ListViewProducts.ItemsSource = null;
                     ListViewProducts.ItemsSource = productsList.OrderByDescending(x => x.price);
+                    break;
+                case FilterProductsEnum.Rating:
+                    ListViewProducts.ItemsSource = null;
+                    ListViewProducts.ItemsSource = productsList.OrderByDescending(x => x.rating);
+                    break;
+                case FilterProductsEnum.Orders:
+                    ListViewProducts.ItemsSource = null;
+                    ListViewProducts.ItemsSource = productsList.OrderByDescending(x => x.rating);
                     break;
                 default:
                     break;

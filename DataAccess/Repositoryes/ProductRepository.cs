@@ -91,6 +91,7 @@ namespace DataAccess.Repositoryes
                         product.description = reader.GetString(reader.GetOrdinal("food_desc"));
                         product.img_url = reader.GetString(reader.GetOrdinal("food_img_url"));
                         product.country = reader.GetString(reader.GetOrdinal("CountryOfProduction"));
+                        product.rating = reader.GetDecimal(reader.GetOrdinal("Rating"));
 
                     }
                 }
@@ -170,6 +171,46 @@ namespace DataAccess.Repositoryes
                 }
             }
             return productsList;
+        }
+
+        public void DeleteProductFromBasket(int userID, int ProductID)
+        {
+            using (SqlConnection conn = ConnectionManager.CreateConnection())
+            {
+                conn.Open();
+                using var cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "[dbo].[DeleteUserProductFromBasket]";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@user_id", userID);
+                cmd.Parameters.AddWithValue("@product_id", ProductID);
+
+                using SqlDataReader reader = cmd.ExecuteReader();
+            }
+        }
+
+        public int GetProductOrderCount(int productID)
+        {
+            int count = 0;
+            using (SqlConnection conn = ConnectionManager.CreateConnection())
+            {
+                conn.Open();
+                using var cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "[dbo].[GetAllOrderCountByProductID]";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@product_id", productID);
+
+                using SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    if (reader.Read())
+                    {
+                        count = reader.GetInt32("productCount");
+                    }
+                }
+            }
+            return count;
         }
     }
 }

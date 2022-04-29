@@ -101,11 +101,13 @@
                             Foreground="#707070" />
 
                         <CheckBox
+                            x:Name="Orders"
                             Margin="15,10"
                             Content="Ամենաշատ պատվերները"
                             Foreground="#707070" />
 
                         <CheckBox
+                            x:Name="Rating"
                             Margin="15,10"
                             Content="Մամենաբարձր վարկանիշի"
                             Foreground="#707070" />

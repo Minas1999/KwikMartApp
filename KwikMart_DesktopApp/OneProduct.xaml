@@ -394,13 +394,13 @@
                     Text="Միջին գնահատական" />
 
                 <TextBlock
-                    x:Name="MovieRelease4"
+                    x:Name="ordersCount"
                     Grid.Row="0"
                     Grid.Column="1"
                     Margin="40,0,0,0"
                     FontSize="15"
                     Foreground="Black"
-                    Text="128 հատ" />
+                    Text="{Binding ordersCount}" />
 
                 <materialDesign:RatingBar 
                     MouseDoubleClick="GetRating"
@@ -410,7 +410,7 @@
                     Grid.Column="1" 
                     Max="5"
                     Margin="40,0,0,0" 
-                    Value="{Binding Value1, Mode=TwoWay}" />
+                     />
 
             </Grid>
 

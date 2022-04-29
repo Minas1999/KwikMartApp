@@ -77,12 +77,15 @@
                                                     Text="{Binding count, StringFormat=\{0\} հատ}" />
 
                                                 <Button
-                                                    x:Name="btn"
-                                                    Margin="5,20,5,20"
-                                                    Background="#BDBDBD"
-                                                    Click="History"
-                                                    Content="Ջնջել"
-                                                    Tag="{Binding}" />
+                                                x:Name="btn"
+                                                Margin="5,20,5,20"
+                                                Background="#BDBDBD"
+                                                BorderBrush="#BDBDBD"
+                                                Click="History"
+                                                Content="Ջնջել"
+                                                Foreground="Black"
+                                                Tag="{Binding}" />
+                                                
 
 
 
@@ -116,18 +119,20 @@
                 </Border>
 
                 <TextBlock
+                    x:Name="name"
                     Margin="0,10,0,0"
                     HorizontalAlignment="Center"
                     FontSize="18"
                     FontWeight="Bold"
                     Foreground="Gray"
-                    Text="Մինաս Սանդաձե" />
+                    Text="{Binding name}" />
                 <TextBlock
+                    x:Name="address"
                     HorizontalAlignment="Center"
                     FontSize="13"
                     Foreground="Gray"
                     Opacity="0.8"
-                    Text="Ավան-Առինջ" />
+                    Text="{Binding address}" />
                 <TextBlock
                     HorizontalAlignment="Center"
                     FontSize="8"
@@ -139,28 +144,29 @@
                     <StackPanel Margin="0,3" Orientation="Horizontal">
                         <materialDesign:PackIcon Foreground="Gray" Kind="Location" />
                         <TextBlock
+                            x:Name="address1"
                             Margin="10,0"
                             Foreground="Gray"
-                            Text="Ավան-Առինջ, Կոտայքի մարզ" />
+                            Text="{Binding address1}" />
                     </StackPanel>
                     <StackPanel Margin="0,3" Orientation="Horizontal">
                         <materialDesign:PackIcon Foreground="Gray" Kind="Cellphone" />
                         <TextBlock
+                            x:Name="phone"
                             Margin="10,0"
                             Foreground="Gray"
-                            Text="+374 91 386888" />
+                            Text="{Binding phone}" />
                     </StackPanel>
                     <StackPanel Margin="0,3" Orientation="Horizontal">
                         <materialDesign:PackIcon Foreground="Gray" Kind="Email" />
                         <TextBlock
+                            x:Name="gmail"
                             Margin="10,0"
                             Foreground="Gray"
-                            Text="mss.sandadze@gmail.com" />
+                            Text="{Binding gmail}" />
                     </StackPanel>
                 </StackPanel>
-
             </StackPanel>
-
         </Grid>
 
         <StackPanel Grid.RowSpan="2">

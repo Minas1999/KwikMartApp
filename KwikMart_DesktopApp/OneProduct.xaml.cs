@@ -23,22 +23,24 @@ namespace KwikMart_DesktopApp
         private readonly int foodID;
         ProductRepository productRepository;
         public static List<Products> basketProducts = new();
+        Products pr;
         public OneProduct(int foodID)
         {
             InitializeComponent();
             productRepository = new();
             this.foodID = foodID;
 
-            Products pr = new Products();
+            pr = new Products();
             pr = productRepository.GetProductByID(foodID);
             MovieTitle.Text = pr.name;
             ImageBrush imgBrush = new ImageBrush();
             imgBrush.ImageSource = new BitmapImage(new Uri(@$"{pr.img_url}", UriKind.Absolute));
             image.ImageSource = imgBrush.ImageSource;
-
+            ordersCount.Text = productRepository.GetProductOrderCount(pr.food_id).ToString();
             //rating.IsReadOnly = false;
-            rating.Value = 1;
+            rating.Value = (int)pr.rating;
             Country.Text = pr.country;
+            //rating.Value = (int)pr.rating;
 
         }
 
@@ -101,6 +103,9 @@ namespace KwikMart_DesktopApp
             //    rating.IsReadOnly = false;
             //    MessageBox.Show(rating.Value.ToString());
             //}
+
+            //MessageBox.Show(pr.rating.ToString());
+            
         }
     }
 }

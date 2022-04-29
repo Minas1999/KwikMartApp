@@ -41,7 +41,7 @@
                     
                     <StackPanel Orientation="Horizontal" Margin="10,200, 10, 0">
                         
-                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FF3D56AC" BorderBrush="#FF3D56AC">
+                        <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FF3D56AC" Click="facebook" BorderBrush="#FF3D56AC">
                             <materialDesign:PackIcon Kind="Facebook" VerticalAlignment="Center" Foreground="White"/>
                         </Button>
                         <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Margin="15,0" Background="#FF01BAFF" BorderBrush="#FF01BAFF">

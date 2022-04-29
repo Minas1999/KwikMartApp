@@ -9,6 +9,8 @@ namespace DataAccess
     public enum FilterProductsEnum
     {
         ASC,
-        DESC
+        DESC,
+        Rating,
+        Orders
     }
 }

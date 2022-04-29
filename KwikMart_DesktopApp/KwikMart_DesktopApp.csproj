@@ -17,4 +17,8 @@
     <ProjectReference Include="..\KwikMart Database\KwikMart Database.sqlproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Image\" />
+  </ItemGroup>
+
 </Project>

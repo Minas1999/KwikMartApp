@@ -50,17 +50,27 @@ namespace KwikMart_DesktopApp
 
             if (Convert.ToBoolean(InASC.IsChecked))
             {
-                ((MainWindow)System.Windows.Application.Current.MainWindow).FilterFoods(FilterProductsEnum.ASC);
+                ((MainWindow)Application.Current.MainWindow).FilterFoods(FilterProductsEnum.ASC);
                 _ = NavigationService.Navigate(null);
             }
 
             if (Convert.ToBoolean(InDESC.IsChecked))
             {
-                ((MainWindow)System.Windows.Application.Current.MainWindow).FilterFoods(FilterProductsEnum.DESC);
+                ((MainWindow)Application.Current.MainWindow).FilterFoods(FilterProductsEnum.DESC);
                 _ = NavigationService.Navigate(null);
             }
 
+            if (Convert.ToBoolean(Rating.IsChecked))
+            {
+                ((MainWindow)Application.Current.MainWindow).FilterFoods(FilterProductsEnum.Rating);
+                _ = NavigationService.Navigate(null);
+            }
 
+            if (Convert.ToBoolean(Orders.IsChecked))
+            {
+                ((MainWindow)Application.Current.MainWindow).FilterFoods(FilterProductsEnum.Orders);
+                _ = NavigationService.Navigate(null);
+            }
         }
     }
 }

@@ -112,5 +112,7 @@
     <None Include="GetAllOrders.sql" />
     <None Include="Queryes\UserLogin.sql" />
     <None Include="Queryes\Registration.sql" />
+    <None Include="Queryes\DeleteUserProductFromBasket.sql" />
+    <None Include="Queryes\GetAllOrderCountByProductID.sql" />
   </ItemGroup>
 </Project>
